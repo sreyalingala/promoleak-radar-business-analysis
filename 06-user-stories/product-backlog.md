@@ -1,35 +1,34 @@
-# Product Backlog: PromoLeak Radar (MVP-oriented)
+# Product Backlog: PromoLeak Radar (Northline Market)
 
-**Notes:** Priority column is for planning fights, not a contract. IDs are just for tracing.
+> **Note:** This backlog supports the **PromoLeak Radar** case study for **Northline Market** (fictional). Priorities are for planning, not a promise. **Related requirement ID** lists the main FR, BR, or NFR hooks; read the full requirement text in `04-business-requirements/`. Refinement would add estimates, dependencies, and sprint placement.
 
-## Backlog
+**Project:** PromoLeak Radar
 
-| ID | Theme | Short title | Priority | Notes |
-|----|-------|-------------|----------|-------|
-| PB-01 | Visibility | Daily leakage summary dashboard | Must | Finance + ops |
-| PB-02 | Visibility | Drill-down to orders with reason codes | Must | Permissions model |
-| PB-03 | Detection | Configurable thresholds with owner | Should | Phased if complex |
-| PB-04 | Workflow | Investigation queue with statuses | Must | May start as spreadsheet-backed process |
-| PB-05 | Workflow | False positive feedback capture | Should | Feeds tuning |
-| PB-06 | Rules | Enforce stacking policy in checkout | Must | Eng-heavy; may split spikes |
-| PB-07 | Rules | Category margin floor flags | Should | Needs reliable COGS |
-| PB-08 | Referral | Payout delay / additional checks | Should | Policy + eng |
-| PB-09 | CS | Agent view of case + disposition | Should | Integration TBD |
-| PB-10 | Governance | Pre-flight campaign checklist | Could | Process + light tooling |
-| PB-11 | Alerting | Email/Slack alert on threshold breach | Should | Avoid noise |
-| PB-12 | Audit | Export case history for audit | Must | Scope columns with Legal |
+---
 
-## Dependencies (high level)
+## Backlog (22 items)
 
-- PB-01/02 depend on data model in `08-solution-design/data-requirements.md`.
-- PB-06 may be prerequisite or parallel to PB-03 depending on architecture choice.
-
-## Parking lot
-
-- Partner marketplace-specific backlog items, deferred until scope includes partners.
-
-## Refinement log
-
-| Date | Change |
-|------|--------|
-| | Initial placeholder backlog |
+| Backlog ID | Epic | Backlog item | Description | Priority | Business value | Related requirement ID | Primary stakeholder | Notes |
+|-------------|------|--------------|-------------|----------|----------------|-------------------------|----------------------|-------|
+| BL-001 | Coupon Validation | Enforce stacking at capture | Checkout validates stack policy and application order; persists policy version id on the order for later audit. | Must Have | Stops margin surprises when two codes combine outside what Marketing published. | FR-003, BR-005 | Marketing / Growth Manager | Golden-path UAT orders come from Marketing, not invented by QA. |
+| BL-002 | Account and Identity Signals | First-time reuse detection | Flag first-time or new-customer promos when reuse hits the agreed customer definition or blocked linkage window. | Must Have | Cuts duplicate-account farming on welcome offers. | FR-001, BR-001, BR-002 | Fraud / Risk Analyst | Legal must bless which signals count as “same customer.” |
+| BL-003 | Account and Identity Signals | Shared payment signal | Flag accounts sharing payment token or card hash when first-time or high-value promos fire. | Must Have | Fast signal Finance already believes in gut checks, now productized. | FR-002, BR-007 | Fraud / Risk Analyst | PCI and Data own what can be compared at rest. |
+| BL-004 | Account and Identity Signals | Low-margin SKU discount checks | Compare line discount depth to margin or category exclusion lists; flag breaches when COGS is trusted, otherwise flag “margin unknown.” | Must Have | Stops deep discounts on SKUs merchandising never meant to give away. | FR-005, BR-006 | Finance Manager | If COGS is shaky, ship “flag only” first and document in BR-006 notes. |
+| BL-005 | Account and Identity Signals | Device and address expansion | Device velocity and shipping address hash signals with conservative thresholds and allowlist path for dorms and gifts. | Should Have | Adds linkage beyond payment without pretending the graph is perfect day one. | FR-002, BR-008, BR-009 | Fraud / Risk Analyst | Expect false positives; tune with Ops weekly in pilot. |
+| BL-006 | Referral Abuse | Referral abuse pattern flags | Detect self-referral, closed loops, velocity, early churn patterns per referral business rules. | Must Have | Protects referral spend from obvious loops. | FR-004, BR-003, BR-004 | Marketing / Growth Manager | Customer-facing text for any clawback goes through Legal (NFR-012). |
+| BL-007 | Referral Abuse | Refund and return netting events | Feed Finance-friendly events when referral payouts should reverse or net after refunds. | Must Have | Stops paying acquisition credit on revenue that walked back. | BR-012, FR-004 | Finance Manager | Depends on clean refund events from payments or OMS. |
+| BL-008 | Risk Scoring | Risk score or tier v1 | Weighted score from stacking, margin breach, referral hits, duplicate signals; store version id with each evaluation. | Should Have | Lets Ops sort the queue instead of FIFO everything. | FR-007, BR-011 | Operations Manager | If weights ship in config, point to NFR-009 maintainability. |
+| BL-009 | Manual Review | Investigation queue MVP | Single queue with New status, filters, search by order id, account, campaign; stale-data banner. | Must Have | Replaces “who has the spreadsheet?” when a code runs hot. | FR-008, BR-011 | Fraud / Risk Analyst | Pipeline failure must not silently empty the queue. |
+| BL-010 | Manual Review | Case assignment and pools | Assign to person or pool; reassign for PTO; show unassigned age for SLA visibility. | Must Have | Coverage and accountability when volume spikes. | FR-009 | Operations Manager | Log assignment changes under FR-012. |
+| BL-011 | Manual Review | SLA tracking | Queue shows age, due time, breach indicator per SLA class. | Should Have | Stops cases aging out during peak without anyone noticing. | FR-010 | Operations Manager | SLA numbers start in runbook, then harden in product. |
+| BL-012 | Manual Review | Structured disposition | Required fields and reason codes per outcome; hard stop on sloppy closes for high-risk statuses. | Must Have | CS and Finance stop getting “closed, no notes” mysteries. | FR-011 | Compliance / Legal Representative | Pair with customer comms templates (NFR-012). |
+| BL-013 | Governance and Audit | Audit trail for config and cases | Append-only style log for thresholds, kill-switch, case status, exports per NFR-005 scope. | Must Have | Defensible story when Legal or a customer pushes back. | FR-012, BR-016, NFR-005 | Engineering Lead | Retention and purge per NFR-008. |
+| BL-014 | Campaign Reporting | Campaign leakage dashboard | Campaign and code level flagged dollars, counts, and trends using Finance-signed leakage definition. | Must Have | One shared picture for Marketing vs Finance arguments. | FR-006, BR-018 | Finance Manager | Finance tie-out sample per NFR-010 before exec readout. |
+| BL-015 | Dashboard and Analytics | Dashboard filters | Standard filters for date, campaign, code, category, channel, flag type within data limits. | Must Have | Self-serve slices during an incident without a new SQL ticket every hour. | FR-013, NFR-001 | Finance Manager | Watch load time against NFR-001. |
+| BL-016 | Dashboard and Analytics | Campaign ROI and exec strip | Marketing-facing ROI slice plus a small headline strip for the sponsor (same marts, Finance footnotes on exec numbers). | Should Have | One steering view for “are we buying trash traffic with promos?” without two slide decks. | FR-006, BR-018 | Marketing / Growth Manager | Exec tiles only show Finance-approved definitions. |
+| BL-017 | Dashboard and Analytics | Exportable board pack | Role-controlled exports of aggregates or limited order lists with Legal-approved columns; export logged. | Must Have | Board and audit requests without one-off hero pulls. | FR-014, NFR-003 | Finance Manager | Logged exports satisfy audit questions without guessing who ran what. |
+| BL-018 | Access and Security | SSO and least privilege | Corporate IdP login; aggregate vs investigator vs admin; deny attempts logged. | Must Have | Stops casual PII sprawl during a fire drill. | FR-015, NFR-002, NFR-011 | Engineering Lead | Negative UAT matrix per role. |
+| BL-019 | Access and Security | Masked investigation UI | Mask or gate PII in investigation panes per Legal table. | Must Have | Investigators get enough context without oversharing. | NFR-003 | Compliance / Legal Representative | Spot check screens with Legal before wide rollout. |
+| BL-020 | Governance and Audit | Policy exception workflow | Requester, approver, time window, scope, optional auto-expiry; no same-person approval. | Should Have | Handles VIP and goodwill without silent shadow rules. | FR-016, BR-017 | Customer Support Manager | Finance decides if exceptions enter leakage numerator. |
+| BL-021 | Coupon Validation (ops) | Kill-switch and redemption spike alerts | Authorized user disables or caps a code with audit entry; alerts when redemption or flag volume crosses thresholds with deep link to dashboard. | Must Have | Limits damage when a code misbehaves mid-weekend and wakes Ops before close. | FR-017, FR-018, BR-014 | Marketing / Growth Manager | Rollback tested in UAT; tune alert thresholds early or people mute them. |
+| BL-022 | UAT Readiness | Guided UAT pack tied to FR list | Scripts for Finance and Fraud that walk FR-001 through FR-018 plus NFR smoke (load, deny path, export log, Legal checklist item). | Should Have | Proves v1 is usable before Marketing bets a peak season on it. | NFR-006, NFR-010, NFR-012 | Product Manager | Include reporting definition sign-off (BR-018) in exit criteria. |
