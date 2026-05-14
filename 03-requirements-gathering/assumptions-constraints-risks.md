@@ -7,7 +7,7 @@ Update this when workshops turn up new facts or when data proves an assumption w
 
 | ID | Assumption | Implication if wrong |
 |----|------------|----------------------|
-| A-01 | Northline can access order-level promo application history for at least 12 months | Timeline slips if archives incomplete |
+| A-01 | Northline Market can access order-level promo application history for at least 12 months | Timeline slips if archives incomplete |
 | A-02 | “Customer” can be tied to a stable account key for most DTC orders | Identity resolution work grows scope |
 | A-03 | Referral program rules are documented somewhere retrievable | Extra discovery if only in people’s heads |
 | A-04 | Pilot can start on one category or region without full enterprise rollout | Reprioritize if business insists on big-bang |

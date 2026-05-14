@@ -1,6 +1,6 @@
 # PromoLeak Radar: Business Analysis for Promotion Abuse & Revenue Leakage Detection
 
-Documentation-only portfolio case study for a mid-sized e-commerce retailer (**Northline Commerce** — fictional name). The scenario is promotion abuse and revenue leakage: stacked coupons, duplicate accounts, referral gaming, and discounts applied where margin cannot support them. The repo is written the way a BA would hand off early discovery: clear structure, real artifact types, and honest TBDs where workshops or FP&A would still supply names, dates, and numbers.
+Documentation-only portfolio case study for a mid-sized e-commerce retailer (**Northline Market** — fictional name). The scenario is promotion abuse and revenue leakage: stacked coupons, duplicate accounts, referral gaming, and discounts applied where margin cannot support them. The repo is written the way a BA would hand off early discovery: clear structure, real artifact types, and honest TBDs where workshops or FP&A would still supply names, dates, and numbers.
 
 ---
 

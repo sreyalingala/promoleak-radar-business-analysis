@@ -11,7 +11,7 @@ flowchart LR
     Gro[Growth marketer]
   end
 
-  subgraph northline [Northline Commerce]
+  subgraph northline [Northline Market]
     Web[Web / App Storefront]
     Cart[Cart and Checkout]
     Promo[Promotion Engine]

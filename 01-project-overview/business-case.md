@@ -49,7 +49,7 @@ Implementation direction (not decided in this document alone) is expected to com
 2. **Visibility** — reporting/dashboard so Finance and ops see flagged volume, campaign concentration, and queue depth without waiting for month-end.
 3. **Workflow** — who investigates, how cases close, how CS learns disposition, how escalation runs when a code misbehaves at scale.
 
-Heavy **fraud platform** spend stays off the table until requirements show it’s necessary; Northline may get far with better rules + reporting first.
+Heavy **fraud platform** spend stays off the table until requirements show it’s necessary; Northline Market may get far with better rules + reporting first.
 
 ---
 
@@ -78,7 +78,7 @@ Quantified NPV and payback belong here after FP&A assigns a leakage range and En
 
 **Approve the analysis phase** and staff it with a named BA plus sponsor time for workshops. Use the deliverables in this repo (and the parallel folders under `02-` through `10-`) as the working package.
 
-For **investment** beyond analysis: steer leadership toward **rule fixes + monitoring + investigation workflow** first; defer large vendor fraud buys until Northline knows which signals and volumes justify the cost.
+For **investment** beyond analysis: steer leadership toward **rule fixes + monitoring + investigation workflow** first; defer large vendor fraud buys until Northline Market knows which signals and volumes justify the cost.
 
 ---
 

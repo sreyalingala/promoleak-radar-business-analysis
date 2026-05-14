@@ -14,7 +14,7 @@
 
 ## 2. Business context
 
-Coupons, first-time offers, and referrals are core to how Northline acquires and retains customers. Finance and ops are convinced a real chunk of promo value is going to people breaking policy or hitting holes in how checkout applies rules (dup accounts, stacking weirdness, wrong categories). Growth still has to run campaigns. The ask for this BRD slice is: enough definition and monitoring intent that we can tighten things without flying blind or surprising CS.
+Coupons, first-time offers, and referrals are core to how Northline Market acquires and retains customers. Finance and ops are convinced a real chunk of promo value is going to people breaking policy or hitting holes in how checkout applies rules (dup accounts, stacking weirdness, wrong categories). Growth still has to run campaigns. The ask for this BRD slice is: enough definition and monitoring intent that we can tighten things without flying blind or surprising CS.
 
 ## 3. Business objectives
 

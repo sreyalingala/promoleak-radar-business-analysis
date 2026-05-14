@@ -1,7 +1,7 @@
 # Cost–Benefit Analysis (Working Paper)
 
 **Project:** PromoLeak Radar  
-**Disclaimer:** Figures below are **illustrative placeholders** for portfolio structure. Replace with Northline models.
+**Disclaimer:** Figures below are **illustrative placeholders** for portfolio structure. Replace with Northline Market models.
 
 ## Costs (12-month view, indicative categories)
 

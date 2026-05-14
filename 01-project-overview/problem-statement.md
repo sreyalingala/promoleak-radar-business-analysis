@@ -42,7 +42,7 @@ These are **themes** for discovery — not a final RCA. Engineering and Data wil
 - **Financial:** Erosion of gross margin after promotions on affected SKUs and campaigns; harder to forecast promo ROI.
 - **Operational:** Hours lost in cross-team reviews; repeated ad hoc analyses; Engineering pulled into emergency fixes.
 - **Customer / brand:** Disputes over removed rewards or blocked accounts; inconsistent agent handling when internal policy is unclear.
-- **Strategic:** Growth may resist scaling referral or aggressive coupons until Finance can show **controlled** economics — slowing initiatives Northline otherwise wants to run.
+- **Strategic:** Growth may resist scaling referral or aggressive coupons until Finance can show **controlled** economics — slowing initiatives Northline Market otherwise wants to run.
 
 ---
 
@@ -58,7 +58,7 @@ These are **themes** for discovery — not a final RCA. Engineering and Data wil
 
 ## What success would look like
 
-- Northline agrees on **one** headline definition (or small set) of “suspected leakage” for internal management, with footnotes where data is weak.
+- Northline Market agrees on **one** headline definition (or small set) of “suspected leakage” for internal management, with footnotes where data is weak.
 - **Top leakage modes** have named owners, documented rules, and a path to engineering backlog with priorities.
 - **Dashboard or report pack v1** exists (after build) so daily/weekly review is possible without custom SQL for standard questions.
 - **Fewer repeat incidents** of the same stacking or category hole; when they occur, postmortem links to a requirement or test gap.
@@ -69,5 +69,5 @@ These are **themes** for discovery — not a final RCA. Engineering and Data wil
 ## Out of scope (this problem statement)
 
 - Choosing a specific fraud vendor or ML approach — out of scope **here**; may follow from requirements.
-- Full replacement of Northline’s identity stack — only noted if analysis proves it’s a hard dependency.
+- Full replacement of Northline Market’s identity stack — only noted if analysis proves it’s a hard dependency.
 - Criminal referral or law-enforcement process — outside this BA problem statement unless Legal opens a separate track.

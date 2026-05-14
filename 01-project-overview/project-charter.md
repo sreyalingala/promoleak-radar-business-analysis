@@ -49,7 +49,7 @@ The business lacks a shared, trusted view of leakage volume and drivers, and lac
 ## Out of scope
 
 - Writing or deploying production code, standing up pipelines, or selecting a vendor (analysis may *inform* vendor RFP later).
-- Replacing Northline’s core commerce platform or identity provider as part of this charter (separate initiative if ever).
+- Replacing Northline Market’s core commerce platform or identity provider as part of this charter (separate initiative if ever).
 - Legal/criminal fraud prosecution strategy; this effort documents **business rules** and **policy**; Legal reviews customer-facing enforcement separately.
 - Redesign of marketing creative or full loyalty program strategy beyond what’s needed to explain promo economics and controls.
 
@@ -81,13 +81,13 @@ Charter phase is in good shape when:
 | **Fraud / Risk** (if separate from CS) | Investigations, case tooling, escalation patterns |
 | **Merchandising / Category** | SKU margin floors, excluded categories |
 
-Names and exact titles: **TBD** — replace with Northline org chart when formalizing.
+Names and exact titles: **TBD** — replace with Northline Market org chart when formalizing.
 
 ---
 
 ## Assumptions
 
-- Northline can access **order-level** promo application history for a meaningful lookback (target 12+ months; confirm with Data).
+- Northline Market can access **order-level** promo application history for a meaningful lookback (target 12+ months; confirm with Data).
 - A stable **customer account** key exists for most DTC orders; edge cases (guest checkout, marketplace) documented separately.
 - Referral program rules (milestones, payout timing) exist in **writing** somewhere retrievable — if not, discovery takes longer.
 - A **pilot** can narrow to one category or region if the business refuses a big-bang rule change.
@@ -99,7 +99,7 @@ Names and exact titles: **TBD** — replace with Northline org chart when formal
 
 - **Peak season freeze:** Engineering has limited change windows near major shopping peaks — rule changes may need to wait or go through exception path.
 - **BI capacity:** Dashboard work competes with other priorities; MVP reporting must stay small.
-- **No PII in public portfolio copies** of docs if Northline later mirrors this structure externally — use masked examples outside internal systems.
+- **No PII in public portfolio copies** of docs if Northline Market later mirrors this structure externally — use masked examples outside internal systems.
 - Promo rules and codes still sit in **more than one system** — the analysis has to spell out which tool is authoritative for which rule until someone funds a real consolidation.
 
 ---
