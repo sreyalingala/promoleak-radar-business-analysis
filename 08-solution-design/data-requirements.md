@@ -1,7 +1,7 @@
 # Data Requirements
 
 **Project:** PromoLeak Radar  
-**Goal:** List entities and attributes needed to support FRs and dashboards. Technical schema lives with Data Engineering; this is the BA view.
+**Goal:** List entities and fields we need for the FRs and dashboards. Real DDL lives with Data Eng; this is the “what matters to the business” view.
 
 ## Core entities
 

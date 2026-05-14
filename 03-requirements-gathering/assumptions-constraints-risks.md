@@ -1,7 +1,7 @@
 # Assumptions, Constraints, Risks
 
 **Project:** PromoLeak Radar  
-**Living document** — update after workshops and data findings.
+Update this when workshops turn up new facts or when data proves an assumption wrong.
 
 ## Assumptions
 
@@ -38,4 +38,4 @@
 
 ## Sign-off
 
-Not required for this working note; formal risk register may live in PMO tooling if the org uses one.
+This page is a working note. If the company keeps a formal risk register in PMO tooling, copy the high items over — don’t maintain two conflicting lists.

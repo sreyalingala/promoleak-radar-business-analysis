@@ -14,7 +14,7 @@
 ## Actions by level (illustrative)
 
 - **L1:** Confirm/deny, document, close or route.
-- **L2:** Pause specific campaign if kill-switch exists; narrow blast radius.
+- **L2:** Pause the specific campaign if there’s a kill-switch; keep blast radius small (don’t turn off unrelated codes by accident).
 - **L3:** Consider temporary hold on new referrals or global cap — **sponsor approval** if customer-visible.
 - **L4:** External comms only through Legal-approved channels.
 
@@ -31,7 +31,7 @@ Finance owns dollar impact narrative; Growth owns campaign intent; Legal owns wo
 
 ## Post-incident
 
-- Short **postmortem** within 10 business days: root cause, detection gap, follow-up requirement IDs.
+Short write-up within ~10 business days: what broke, why we missed it, what req/test we’re adding. Doesn’t need to be a 40-slide RCA unless L3/L4.
 
 ## Open
 

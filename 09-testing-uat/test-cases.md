@@ -1,5 +1,7 @@
 # Test Cases (Sample Set)
 
+Starter pack for UAT — extend when fixtures and real campaign codes exist.
+
 **Project:** PromoLeak Radar  
 **Prefix:** TC-* maps to RTM when filled.
 
@@ -27,7 +29,7 @@
 
 ### TC-WF-01 — Status transition audit
 
-| Field | value |
+| Field | Value |
 |-------|--------|
 | Preconditions | Investigator role; open case C-100 |
 | Steps | 1. Set status In review → Confirmed abuse. 2. Save. 3. Reopen history. |

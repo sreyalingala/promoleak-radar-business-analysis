@@ -24,14 +24,14 @@ Northline Commerce runs aggressive promotions to compete with larger marketplace
 
 ## Financial view (placeholder)
 
-Detailed NPV and payback belong here once finance supplies baseline leakage estimate and implementation cost range. For this portfolio artifact we assume:
+Real NPV/payback waits on FP&A for a leakage range and eng/vendor for implementation cost. Until then:
 
-- **Annual leakage under review:** TBD (finance model).
-- **Cost of delay:** Every quarter without baseline metrics, teams debate anecdotes instead of fixing highest-loss segments.
+- **Annual leakage under review:** TBD — needs finance model, not my guess.
+- **Cost of delay:** each quarter without agreed metrics, the same meeting gets rerun with different spreadsheets.
 
 ## Recommendation (for charter stage)
 
-Proceed with structured BA work under Option C framing: tighten rules where justified, but pair with measurable monitoring and clear escalation so changes can be defended with data.
+Use **Option C** as the working story for this analysis: fix the obvious rule issues where Growth and Legal will sign, but don’t skip monitoring + escalation. Otherwise we tighten promos blind and still fight about whether it worked.
 
 ## Approvals
 

@@ -8,7 +8,7 @@
 
 **As a** finance analyst,  
 **I want** a daily summary of orders flagged for suspected promotion abuse,  
-**So that** I can discuss trends with Growth using the same numbers as operations.
+**So that** Growth and I aren’t comparing two different exports in a conference room.
 
 **Acceptance criteria**
 

@@ -3,35 +3,29 @@
 **Project:** PromoLeak Radar  
 **Status:** Early-position paper — revise after data baseline workshop.
 
-## Situation recap
+## Recap
 
-Northline is bleeding margin through promotion and referral mechanics that are easy to exploit or misconfigure. The organization debates anecdotes because there is no single trusted operational view and no consistent escalation path.
+Margin is walking out on promos and referrals — mix of people gaming the system and straight-up config mistakes. Meetings go in circles because there isn’t one operational view everyone trusts, and escalation when a code goes bad is inconsistent.
 
-## Recommendation summary
+## Recommendation
 
-1. **Instrument and measure first in parallel with low-regret rule fixes.** Tighten obvious stacking gaps only where Legal/Growth agree, but do not pretend policy alone fixes the problem without visibility.
-2. **Ship a small dashboard + case workflow MVP** tied to the FR set in this repo: daily aggregates, drill-down, reason codes, audit trail, role-based access.
-3. **Staff the investigation queue** lightly at launch; tune thresholds weekly for the first month to avoid alert fatigue.
-4. **Govern campaign publishing** with a short checklist for high-risk codes (deep discount + broad audience + long window).
-5. **Defer** large vendor fraud purchases until MVP shows which signals actually matter for Northline’s mix.
+Get reporting and a thin investigation path in place while we fix the obvious stacking / eligibility holes Growth and Legal will actually sign. I wouldn’t buy a heavy fraud suite until we know which signals matter for *our* mix; the FR list in this repo is sized for a small MVP: daily aggregates, drill to order, reason codes, audit on status changes, roles locked down.
 
-## Risks if we do not act
+Staff the review queue lightly at launch and plan to tweak thresholds weekly for the first month — otherwise people will silence alerts and we’re back to anecdotes.
 
-- Finance loses credibility on margin narrative.
-- CS burns goodwill compensating for inconsistent enforcement.
-- Engineering keeps fighting one-off fires without durable requirements.
+Short publishing checklist for the worst class of codes (deep discount + wide audience + long window) is cheap politics and saves a lot of firefighting.
 
-## Conditions for success
+## If we punt
 
-- Named owners for rule changes, case disposition, and metric definitions.
-- Legal-approved customer messaging for any clawback or restriction.
-- Single data path for promo facts — political work, but non-negotiable for clean KPIs.
+Finance keeps getting challenged on margin story. CS keeps writing goodwill credits to paper over inconsistent enforcement. Eng stays in interrupt mode with no written reqs behind the fixes.
 
-## Next steps (30–60 days)
+## What has to be true for this to work
 
-- Run elicitation per `03-requirements-gathering/elicitation-plan.md`.
-- Replace TBD numbers in business case and CBA with finance-backed baseline.
-- Finalize MVP scope with PO; lock UAT entry criteria.
+Named owners for rule changes, case outcomes, and the headline metric definition. Legal-reviewed wording before we claw anything back or send customer-visible enforcement. One agreed path for promo facts into the warehouse — boring work, but without it the KPIs stay fightable.
+
+## Next 30–60 days
+
+Run interviews/workshops per elicitation plan. Replace TBDs in business case / CBA with FP&A numbers. PO locks MVP slice; UAT entry criteria written down.
 
 ## Sign-off block
 

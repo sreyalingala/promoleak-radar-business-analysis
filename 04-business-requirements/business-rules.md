@@ -4,7 +4,7 @@
 
 ## Rule catalog (initial stubs)
 
-| Rule ID | Name | Plain-language rule | Owner | Exception process |
+| Rule ID | Name | Rule (draft wording) | Owner | Exceptions |
 |---------|------|---------------------|-------|---------------------|
 | BR-01 | One first-time discount per person | First-time buyer promotion may be used once per verified customer identity | Growth | Manual goodwill via CS with cap |
 | BR-02 | Stacking policy | Unless campaign explicitly allows stack, customer may not combine more than **TBD** promotions on same order | Growth | Emergency campaign flag |
@@ -19,9 +19,9 @@
 - **Suspected abuse:** policy deviation or statistical anomaly pending human confirmation.
 - **Confirmed abuse:** investigator marks case with evidence per internal standard.
 
-## Conflict resolution
+## When two rules disagree
 
-When two rules disagree, **published customer terms** plus **sponsor decision** win; log change in rule version history.
+Published customer terms win on anything customer-facing. Internal-only conflicts go to the sponsor; log what changed and who approved it.
 
 ## Traceability
 

@@ -1,6 +1,6 @@
 # System Context Diagram (Text / C4 Level 1)
 
-**Note:** Names are generic placeholders. Swap for Northline’s actual systems when doing internal documentation.
+**Note:** Box names are generic; swap in whatever we actually run internally.
 
 ```mermaid
 flowchart LR
@@ -50,14 +50,12 @@ flowchart LR
 
 ## Boundaries
 
-- **In scope for analysis:** data flows needed to compute flags and feed dashboard/case tools.
-- **Out of scope (for now):** warehouse management, physical return logistics (except refund events that affect net promo impact).
+- **In scope for this analysis:** feeds and flows we need to flag orders and feed dashboard + case tool.
+- **Out for now:** WMS, physical returns handling — except where refunds change net promo dollars.
 
-## Trust boundaries
-
-- PII minimized in Dash per role.
-- External SaaS (if any) must meet vendor security review — table TBD.
+- PII minimized on Dash by role.
+- Any new SaaS goes through normal vendor security — list TBD.
 
 ## Follow-up
 
-- Replace mermaid with official architecture diagram in `assets/diagrams/` when available.
+Drop a PNG export here when arch review produces something prettier than my mermaid.

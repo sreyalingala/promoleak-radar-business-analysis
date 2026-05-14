@@ -5,9 +5,9 @@
 
 ## Objectives
 
-- Confirm that agreed requirements work for real analyst and investigator tasks.
-- Validate that metrics definitions match Finance expectations within agreed tolerance.
-- Verify role-based access and audit behavior with Security sample checks.
+- Prove the MVP actually helps finance and ops do their job — not just that screens load.
+- Tie the headline metrics to what FP&A said they’d sign (within an agreed tolerance).
+- Spot-check roles: investigator vs. CS vs. finance aggregate — plus a couple of “deny” tries with Security watching if they care.
 
 ## Entry criteria
 
@@ -51,4 +51,4 @@
 
 ## Post-UAT
 
-- Hypercare week: watch pipeline latency and CS ticket tags.
+First week in prod (or pilot): keep an eye on pipeline run time and whether CS tags for “discount dispute” jump — quick sanity check that we didn’t only optimize for the happy path.

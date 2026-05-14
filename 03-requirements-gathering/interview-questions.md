@@ -1,6 +1,6 @@
 # Interview Questions (Bank)
 
-Use subsets per role; not every question every time. Adjust wording to your org’s vocabulary.
+Pick a subset per interview; you’ll bore people if you run the whole list. Wording is generic — swap in your company’s system names.
 
 ## Finance / FP&A
 

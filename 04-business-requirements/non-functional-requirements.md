@@ -23,14 +23,14 @@
 | ID | Statement |
 |----|------------|
 | NFR-20 | Target uptime for monitoring UI: **TBD** (e.g., 99.5% excluding planned maintenance). |
-| NFR-21 | Graceful degradation: if real-time path fails, batch metrics still available with banner. |
+| NFR-21 | If the “near real-time” path dies, batch numbers should still load with a clear “stale / partial” banner — not a silent wrong day. |
 
 ## Usability
 
 | ID | Statement |
 |----|------------|
 | NFR-30 | Primary dashboards usable by a trained finance or ops analyst **without SQL**. |
-| NFR-31 | Reason codes and filters use **business vocabulary** aligned to glossary (separate doc TBD). |
+| NFR-31 | Filters and reason codes use the same words CS and Growth use in meetings; glossary doc still TBD. |
 
 ## Maintainability & support
 

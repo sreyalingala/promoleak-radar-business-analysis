@@ -1,6 +1,8 @@
 # Product Backlog — PromoLeak Radar (MVP-oriented)
 
-**Notes:** Priorities are MoSCoW-style labels for planning conversations, not fixed commitments. Story IDs are for traceability only.
+**Notes:** Priority column is for planning fights, not a contract. IDs are just for tracing.
+
+## Backlog
 
 | ID | Theme | Short title | Priority | Notes |
 |----|-------|-------------|----------|-------|

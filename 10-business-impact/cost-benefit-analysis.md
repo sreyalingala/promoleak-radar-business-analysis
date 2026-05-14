@@ -27,8 +27,8 @@ Payback months = (one-time implementation) / (monthly recurring benefit). **Do n
 
 ## Sensitivity
 
-- If **false positive rate** is high, investigation costs eat savings.
-- If Growth pulls back promos hard, model **conversion loss** as offsetting cost.
+- Investigation-heavy if the false positive rate is ugly — model FTE cost honestly.
+- If Growth throttles promos hard, bake in conversion / revenue hit on the cost side, not only the savings side.
 
 ## Decision record
 

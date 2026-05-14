@@ -20,5 +20,5 @@
 
 ## Gaps
 
-- Single **Accountable** owner for end-to-end “PromoLeak” product might be missing — recommend naming one PO after charter approval.
-- If Engineering is outsourced, RACI columns need vendor PM added.
+- Nobody clearly **Accountable** for the end-to-end “PromoLeak” product yet — need a PO name on the charter once sponsor picks one.
+- If Engineering is outsourced, add vendor PM to the matrix.

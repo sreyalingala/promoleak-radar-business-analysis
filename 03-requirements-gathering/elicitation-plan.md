@@ -1,7 +1,7 @@
 # Elicitation Plan
 
 **Project:** PromoLeak Radar  
-**Goal:** Build a shared picture of current promo/referral mechanics, pain points, and constraints before locking requirements.
+**Goal:** Map how promos and referrals actually work today — including the ugly exceptions — before we freeze requirements.
 
 ## Techniques (planned mix)
 
@@ -28,8 +28,8 @@
 
 ## Risks to elicitation
 
-- **Defensive metrics:** teams may downplay leakage without audit-friendly examples — anonymized samples help.
-- **Tribal knowledge:** key engineers only available near release windows — schedule early.
+- People minimize leakage until you show anonymized examples they can’t argue are “edge cases.”
+- The one engineer who knows the promo corner cases is underwater before peak — book them early or accept holes in the as-is.
 
 ## Status
 

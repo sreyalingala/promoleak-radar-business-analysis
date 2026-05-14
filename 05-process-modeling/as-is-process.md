@@ -1,6 +1,6 @@
 # As-Is Process — Promotions & Leakage (Current State)
 
-**Purpose:** Describe how work actually happens today, including workarounds. This is not the desired future state.
+How things run today, warts included — not what we want next quarter.
 
 ## High-level flow (narrative)
 
@@ -25,13 +25,12 @@
 
 - **Late signal:** Problems found weeks after campaign peak.
 - **Unclear ownership:** Is bad stacking a bug, a config error, or accepted risk?
-- **Tool fragmentation:** BI pulls differ from promo tool export; arguments over “truth.”
+- **Tool fragmentation:** BI export doesn’t match the promo admin export; people fight over which file is “right.”
 - **Customer friction:** Agents lack single case view linking orders, devices, and credits.
 
-## Artifacts (as-is)
+## What exists on paper today
 
-- Email threads, spreadsheets, monthly margin packs.
-- Ticket categories in CS platform (exact codes TBD).
+Mostly email threads, one-off spreadsheets, and the monthly margin pack. CS ticket categories exist but I haven’t mapped which codes map to which tags yet (TBD).
 
 ## Known gaps in this description
 

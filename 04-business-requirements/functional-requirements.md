@@ -7,7 +7,7 @@
 
 | ID | Requirement | Rationale | Priority |
 |----|---------------|-----------|----------|
-| FR-01 | System shall calculate and display daily and weekly totals of **suspected abusive orders** using agreed definitions (see business rules). | Operations needs a pulse, not only month-end | Must |
+| FR-01 | System shall calculate and display daily and weekly totals of **suspected abusive orders** using agreed definitions (see business rules). | Ops shouldn’t wait for month-end close to see a spike | Must |
 | FR-02 | User shall filter dashboard views by **campaign**, **coupon code**, **category**, and **channel** (as data allows). | Leakage is not uniform | Must |
 | FR-03 | User shall drill from aggregate metrics to **order-level list** for investigation (subject to permissions). | Analysts verify before action | Must |
 | FR-04 | System shall show **referral** metrics separately from cart coupons (payout vs. discount). | Different economics and rules | Should |
@@ -16,7 +16,7 @@
 
 | ID | Requirement | Rationale | Priority |
 |----|-------------|-----------|----------|
-| FR-10 | System shall support configurable **thresholds** (e.g., discount % on order, count of accounts per device fingerprint if available) with owner and effective date. | Tuning without redeploy | Should |
+| FR-10 | System shall support configurable **thresholds** (e.g., discount % on order, count of accounts per device fingerprint if available) with owner and effective date. | Finance will want to move cutoffs without a full release every time | Should |
 | FR-11 | System shall attach **reason codes** to flagged orders (multi-select allowed). | CS and audit explainability | Must |
 | FR-12 | System shall allow **false positive** marking and capture short reason. | Model/process improvement | Should |
 
@@ -39,7 +39,7 @@
 
 | ID | Requirement | Rationale | Priority |
 |----|-------------|-----------|----------|
-| FR-40 | Solution shall ingest **order**, **line item**, **payment**, and **promo application** facts from source systems per data map. | Single picture | Must |
+| FR-40 | Solution shall ingest **order**, **line item**, **payment**, and **promo application** facts from source systems per data map. | Same underlying facts for reporting and investigations | Must |
 | FR-41 | Optional: push **case outcome** back to CRM or CS tool for agent visibility. | Fewer repeat contacts | Could |
 
 ## Defer / parking lot

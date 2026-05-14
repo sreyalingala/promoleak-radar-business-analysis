@@ -1,13 +1,13 @@
 # To-Be Process — PromoLeak Radar Operating Model
 
-**Goal:** Same business outcomes (sales, acquisition) with controlled promotional economics and faster, defensible reactions to abuse.
+**Goal:** Still sell stuff and acquire customers — but stop funding obvious abuse and catch bad configs before they run for two weeks unchecked.
 
-## Principles
+## How we want it to feel day-to-day
 
-- **Detect early:** batch or near-real-time flags feed a dashboard and optional alerts.
-- **Decide with evidence:** investigator sees order facts, reason codes, and history.
-- **Change rules deliberately:** campaign caps and stacking policy updates go through agreed change window with comms to CS.
-- **Measure side effects:** watch conversion and CS volume after each material rule change.
+- Flags land in a dashboard (batch is fine at first); alerts only if thresholds are tuned so people don’t mute the channel.
+- Investigator can see order lines, codes, reason codes, history — not a CSV hunt.
+- Rule changes (caps, stacking) go through a small change window + CS heads-up so agents aren’t improvising.
+- After a material rule change, someone actually looks at conversion and CS tags for a week instead of assuming it was fine.
 
 ## To-be flow (narrative)
 
@@ -31,17 +31,17 @@
 
 ## Handoffs
 
-| From | To | Artifact |
+| From | To | What gets handed off |
 |------|-----|----------|
-| Data | Ops | Daily dashboard refresh confirmation |
-| Investigator | CS | Case disposition note template |
-| Growth | All | Change log entry when rule or cap changes |
+| Data | Ops | “Yesterday’s job ran clean” (or not — then banner on dashboard) |
+| Investigator | CS | Short disposition note agents can read |
+| Growth | All | Change log line when a cap or stack rule moves |
 
 ## Dependencies
 
-- Event instrumentation completeness.
-- Staffing for investigation queue — if understaffed, alerts will be ignored.
+- Checkout/OMS actually emitting the events we said we need — otherwise the dashboard is theatre.
+- Bodies on the investigation queue; if it’s nobody’s job, alerts get ignored.
 
 ## Not decided yet
 
-- Build internal case tool vs. extend existing fraud case management — requirements written to be tool-agnostic where possible.
+- New case tool vs. bolt onto whatever fraud/CRM we already pay for — reqs here stay tool-agnostic on purpose.

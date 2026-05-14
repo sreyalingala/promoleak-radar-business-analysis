@@ -1,17 +1,17 @@
 # KPI Framework — PromoLeak Radar
 
-**Intent:** Measure whether we are reducing leakage without silently damaging growth or customer experience. Numbers are examples until baseline captured.
+Rough yardsticks so we can tell if we’re plugging leaks without quietly trashing conversion or CS morale. Numbers stay TBD until FP&A and Data plug baseline.
 
-## North star (pick one with sponsor)
+## Headline metric (sponsor picks one)
 
-**Candidate:** *Gross margin after promotions on high-risk categories* — week over week, with abuse flags explained.
+**Candidate:** gross margin after promotions on the high-risk category set — weekly, with footnotes on what’s in the “abuse-related adjustment” bucket.
 
 ## Operational KPIs
 
 | KPI | Definition sketch | Owner | Frequency | Notes |
 |-----|-------------------|-------|-----------|-------|
 | Flagged order volume | Count of orders meeting suspicion criteria | Ops | Daily | Watch false positives |
-| Estimated leakage $ | Sum of flagged promo $ adjusted by confirmation rate | Finance | Weekly | Method transparent |
+| Estimated leakage $ | Sum of flagged promo $ adjusted by confirmation rate | Finance | Weekly | Document the formula in the dashboard footnote so Growth can’t say we moved the goalposts |
 | Confirmation rate | Confirmed abuse / all closed cases | Fraud/Ops | Weekly | Quality of signals |
 | Mean time to contain | Time from first alert to campaign cap/kill for high-sev | Growth | Per incident | |
 | Queue age | Age of oldest open case | Ops lead | Daily | Staffing signal |
@@ -33,9 +33,9 @@
 
 ## Reporting cadence
 
-- **Weekly ops huddle:** flagged volume, queue, top campaigns.
-- **Monthly exec:** margin after promo, confirmation rate, one story on a prevented loss if available.
+- Weekly ops huddle: flagged volume, queue depth, worst campaigns that week.
+- Monthly with exec: margin after promo, confirmation rate, one concrete example if we have it (not mandatory to force a story).
 
-## Ethics / fairness note
+## Fairness / sensitive attributes
 
-If rules touch sensitive attributes, add fairness review steps — **only if applicable** after Legal/Data ethics input.
+If we start using attributes that could look like protected-class targeting, pull Legal / data ethics in **before** UAT — not a hypothetical for this doc until someone proposes those fields.

@@ -3,11 +3,11 @@
 **Project:** PromoLeak Radar  
 **Audience:** Internal stakeholders only unless Legal approves external messaging
 
-## Principles
+## What we’re trying to avoid
 
-- Finance and Growth hear the same facts from the same slides; avoid back-channel spreadsheets that disagree.
-- Customer Service gets notice **before** rule changes that spike tickets.
-- Engineering gets written decisions after workshops, not only verbal summaries.
+- Finance and Growth each running their own version of the truth in parallel spreadsheets.
+- CS blindsided by a rule change the same day tickets spike.
+- Eng getting “we decided in the room” with nothing in writing.
 
 ## Channels
 
@@ -23,13 +23,10 @@
 - Disagreement on rule interpretation (e.g., “stacking allowed?”) → Growth + Finance joint session; escalate to sponsor if no resolution in 5 business days.
 - Customer-facing incident during pilot → CS lead notifies Legal + Growth same day.
 
-## Artifacts vs. meetings
+## Meetings vs. async
 
-Not everything needs a meeting. Prefer:
-
-- Workshop output posted same day (photos of whiteboard + typed summary).
-- Dashboard mock reviewed async with a 48-hour comment window when possible.
+Skip a meeting when a board photo + typed summary or a 48h async review on a wireframe will do. Same-day post for workshop notes (whiteboard pic + bullets) so people who weren’t in the room don’t get a second-hand version.
 
 ## Open points
 
-- Official repo for “source of truth” docs (Confluence vs. GitHub vs. both) — **TBD per org norms**. This GitHub repo holds the BA portfolio copy.
+- Where the *company* wants master docs (Confluence vs. GitHub vs. both). This repo is my portfolio copy; don’t treat it as the corporate record unless someone says so.

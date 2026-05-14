@@ -14,24 +14,24 @@
 
 ## 2. Business context
 
-Northline Commerce uses coupons, first-time buyer incentives, and referral rewards as part of acquisition and retention. Finance and operations believe a meaningful portion of promotional value is captured by behavior that violates policy or exploits technical gaps (duplicate accounts, stacking, category misuse). The organization needs clarity, monitoring, and controlled responses without shutting down legitimate marketing.
+Coupons, first-time offers, and referrals are core to how Northline acquires and retains customers. Finance and ops are convinced a real chunk of promo value is going to people breaking policy or hitting holes in how checkout applies rules (dup accounts, stacking weirdness, wrong categories). Growth still has to run campaigns. The ask for this BRD slice is: enough definition and monitoring intent that we can tighten things without flying blind or surprising CS.
 
 ## 3. Business objectives
 
-1. Establish agreed definitions and categories for promotion-related leakage.
-2. Provide visibility into volume, trend, and concentration (customer, SKU, campaign, channel).
-3. Enable timely operational response (review queue, alerts, rule adjustments) with audit trail.
-4. Reduce repeat abuse while documenting trade-offs on conversion and customer experience.
+1. Agree what counts as leakage / abuse for this program (written down, not hallway).
+2. See volume, trend, and where it clusters — customer, SKU, campaign, channel — within whatever the data can support.
+3. Give ops a way to respond (queue, alerts, rule tweaks) with an audit trail when someone asks “why did we flag this?”
+4. Cut repeat abuse where we can; be explicit where we’re accepting conversion risk.
 
 ## 4. In scope
 
-- Requirements for detection signals, dashboards, workflows, and rule changes **as a BA package**.
-- UAT themes and acceptance aligned to business outcomes.
+- BA pack: detection signals, dashboards, workflows, rule-change needs, traceability, UAT themes.
+- Enough acceptance language that QA/UAT isn’t inventing success criteria from screenshots.
 
 ## 5. Out of scope
 
-- Production code, vendor selection (captured as assumptions only).
-- Full enterprise identity overhaul unless later approved as separate initiative.
+- Writing production code or picking a vendor here (assumptions only).
+- Replacing the whole identity platform unless that gets its own initiative later.
 
 ## 6. Business capabilities required (summary)
 
@@ -45,14 +45,14 @@ Northline Commerce uses coupons, first-time buyer incentives, and referral rewar
 
 ## 7. Stakeholder needs (condensed)
 
-- **Finance:** credible numbers, month-over-month trend, drill to campaign.
-- **Growth:** ability to exempt or tune rules by segment with guardrails.
-- **CS:** scripts and visibility when customers challenge decisions.
-- **Engineering:** stable interfaces, clear priority on which signals first.
+- **Finance:** numbers they’ll defend in a meeting, MoM trend, drill to campaign/SKU where possible.
+- **Growth:** room to tune or exempt by segment — but not without someone writing down who approved it.
+- **CS:** scripts and a view of what happened when a customer pushes back on a discount or referral.
+- **Engineering:** prioritized signal list and stable-ish interfaces; they’ll tell us what’s unrealistic.
 
-## 8. Acceptance at BRD level
+## 8. When this BRD is “good enough” for sizing
 
-BRD is “ready for solutioning” when: objectives and scope are signed; capability table prioritized; open questions list has owners.
+Sponsor signed scope + objectives, capability table has real priorities (not everything “Must”), and open questions each have a name attached — even if the answer is still “TBD until spike.”
 
 ## 9. Open questions
 

@@ -1,6 +1,6 @@
 # Workshop Agenda — Promo Mechanics & Leakage (90 minutes)
 
-**Objective:** Align on as-is pain points, agree on priority abuse categories, and capture decisions for the BRD slice on rules and monitoring.
+**Objective:** Walk through where it hurts today, agree rough abuse buckets in normal language, and leave with owners + top 3 themes for MVP (not a 50-row backlog).
 
 ## Pre-read (send 48h ahead)
 
@@ -15,7 +15,7 @@ Finance (1), Growth (1–2), Product (1), Engineering (1), Data (1), CS (optiona
 
 | Time | Topic | Facilitator | Output |
 |------|-------|-------------|--------|
-| 0:00–0:10 | Context and goals for the session | BA | Shared understanding |
+| 0:00–0:10 | Why we’re here + what we need out of 90 min | BA | Same page on outcomes |
 | 0:10–0:35 | As-is walk: one happy path + two failure paths | Product / Growth | Whiteboard flows |
 | 0:35–0:55 | Abuse categories — define in business language | BA | Draft glossary |
 | 0:55–1:15 | Prioritization: impact vs. feasibility matrix | Group | Top 3 themes for MVP |

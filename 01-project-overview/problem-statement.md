@@ -1,8 +1,8 @@
 # Problem Statement — Promotion Abuse & Revenue Leakage
 
-## Plain-language summary
+## Summary
 
-Northline Commerce is seeing revenue leak through promotional mechanics: customers (and in some cases organized groups) obtain discounts and referral credits beyond what the business intended. The organization does not yet have a single, trusted view of *how much* is leaking, *where*, or *which controls* would fix the worst pain without tanking legitimate acquisition.
+Discounts and referral credits are walking out the door in ways Growth didn’t intend—sometimes individual customers gaming the rules, sometimes bulkier patterns. Nobody has one report everyone trusts for how much money that is, which campaigns or SKUs it clusters on, or what rule changes would hurt real acquisition least. That’s the gap this analysis is trying to close.
 
 ## What we observe
 
@@ -17,19 +17,21 @@ Northline Commerce is seeing revenue leak through promotional mechanics: custome
 - Time lost in disputes between Growth (“we need promos to convert”) and Finance (“this is out of policy”).
 - Inconsistent customer experience when accounts are restricted without clear internal criteria.
 
-## Problem vs. solution boundary
+## Scope (this document)
 
-**Problem:** Lack of clarity on abuse patterns, weak cross-functional agreement on rules, and insufficient monitoring/escalation.
+**In:** fuzzy abuse definitions, rules that don’t match checkout behavior, nobody owning escalation when a code runs hot.
 
-**Not the problem (for this statement):** “We need AI” or a specific vendor. Technology is a means; the problem is uncontrolled promotional economics and weak feedback loops.
+**Out:** picking a vendor or “we need AI” before we know what we’re measuring.
 
-## Success looks like
+## Done when (roughly)
 
-1. Shared definition of abuse categories and business-owned rules.
-2. Measurable baseline and trend lines for leakage indicators.
-3. Documented processes for detection, review, and customer communication.
-4. Requirements pack ready for build/buy evaluation.
+1. Abuse categories and rule ownership written down and argued through once, not infinite relitigation.
+2. Baseline + trend for whatever leakage proxy Finance signs off on (even if v1 is ugly).
+3. Written path for detect → review → customer comms (Legal in the loop where needed).
+4. Requirements pack good enough to compare build vs. buy without starting from a blank page.
 
-## Out of scope for problem statement
+## Out of scope (for this problem statement)
 
-Criminal prosecution strategy, full enterprise fraud transformation, and marketing creative for campaigns — those may connect later but are not the core statement here.
+- Criminal prosecution / law-enforcement track (separate workstream if ever).
+- Replacing the whole fraud stack or identity platform in one go.
+- Campaign creative and marketing calendar — only touched where economics force it.

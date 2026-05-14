@@ -3,14 +3,14 @@
 **Audience:** Data/BI builders, Product, Finance consumers  
 **Status:** First draft; wireframe companion in `dashboard-wireframe.md`
 
-## Personas & primary questions
+## Who looks at which screen (rough)
 
-| Persona | Primary questions | Typical depth |
-|---------|-------------------|---------------|
-| Finance analyst | How much discount exposure on flagged orders this week vs. last? Which campaigns? | Aggregate → campaign |
-| Ops / investigation lead | What’s new in the queue, who is working it, any SLA risk? | Queue metrics |
-| Growth owner | Is a specific code “too hot” on margin? | Campaign slice |
-| Exec (occasional) | Directionally better or worse after rule change? | Single headline tile |
+| Role | What they’re trying to answer | How deep they go |
+|------|-------------------------------|-------------------|
+| Finance analyst | How bad was this week vs last; which campaigns drove it? | Summary → campaign |
+| Ops / investigation lead | What landed in the queue; who’s stuck; anything aging out? | Queue view |
+| Growth owner | Is this one code cooking margin? | Single campaign slice |
+| Exec (drops in occasionally) | After last week’s rule change, better or worse? | One headline tile is enough |
 
 ## Global filters (MVP)
 
@@ -21,11 +21,10 @@
 
 ## Core views
 
-### 1. Executive pulse (optional one screen)
+### 1. Exec pulse (optional)
 
-- Headline: flagged order count, estimated margin at risk (method footnoted).
-- Sparkline 30-day trend.
-- Annotation area for known events (e.g., “Black Friday”, “config bug #123”).
+- Big numbers: flagged orders, rough $ at risk — with the same footnote Finance approved.
+- 30-day trend line; scribble space (or annotations) for “we changed rule X on this date.”
 
 ### 2. Operations dashboard
 

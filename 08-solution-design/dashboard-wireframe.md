@@ -1,6 +1,6 @@
 # Dashboard Wireframe (Text-First)
 
-**Purpose:** Give designers and BI a starting layout before pixels. Replace with Figma or BI mock when available.
+Rough ASCII so BI / UX have something to react to before anyone opens Figma.
 
 ## Screen: Daily Leakage Overview
 

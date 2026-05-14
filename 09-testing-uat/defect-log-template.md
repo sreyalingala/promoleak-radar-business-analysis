@@ -1,7 +1,7 @@
 # Defect Log Template
 
 **Project:** PromoLeak Radar  
-Copy rows into your tracker (Excel / Sheets / Jira). This file is the canonical **field list** for the portfolio.
+Copy these columns into Jira / Excel / whatever you actually use. I kept a copy here so the portfolio shows what we tracked.
 
 ## Defect record fields
 
