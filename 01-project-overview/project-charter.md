@@ -1,7 +1,7 @@
-# Project Charter — PromoLeak Radar
+# Project Charter: PromoLeak Radar
 
-**Organization:** Northline Market (fictional mid-sized e-commerce — portfolio case study)  
-**Document status:** Draft — discovery phase, sponsor sign-off pending  
+**Organization:** Northline Market (fictional mid-sized e-commerce, portfolio case study)  
+**Document status:** Draft, discovery phase, sponsor sign-off pending  
 **Version:** 0.2  
 **Last updated:** [Date]
 
@@ -42,7 +42,7 @@ The business lacks a shared, trusted view of leakage volume and drivers, and lac
 
 - BA discovery and documentation: charter, problem statement, business case, stakeholder analysis, elicitation, BRD/FR/NFR, business rules, process models, user stories, traceability, dashboard/data requirements at BA level, UAT plan and sample tests, KPI and impact notes.
 - Explicit assumptions, constraints, risks, and open questions.
-- Handoff pack suitable for **estimation** and **UAT planning** — not production implementation in this repo.
+- Handoff pack suitable for **estimation** and **UAT planning**, not production implementation in this repo.
 
 ---
 
@@ -81,7 +81,7 @@ Charter phase is in good shape when:
 | **Fraud / Risk** (if separate from CS) | Investigations, case tooling, escalation patterns |
 | **Merchandising / Category** | SKU margin floors, excluded categories |
 
-Names and exact titles: **TBD** — replace with Northline Market org chart when formalizing.
+Names and exact titles: **TBD**, replace with Northline Market org chart when formalizing.
 
 ---
 
@@ -89,7 +89,7 @@ Names and exact titles: **TBD** — replace with Northline Market org chart when
 
 - Northline Market can access **order-level** promo application history for a meaningful lookback (target 12+ months; confirm with Data).
 - A stable **customer account** key exists for most DTC orders; edge cases (guest checkout, marketplace) documented separately.
-- Referral program rules (milestones, payout timing) exist in **writing** somewhere retrievable — if not, discovery takes longer.
+- Referral program rules (milestones, payout timing) exist in **writing** somewhere retrievable, if not, discovery takes longer.
 - A **pilot** can narrow to one category or region if the business refuses a big-bang rule change.
 - Legal will participate before any **customer-visible** enforcement copy goes live.
 
@@ -97,10 +97,10 @@ Names and exact titles: **TBD** — replace with Northline Market org chart when
 
 ## Constraints
 
-- **Peak season freeze:** Engineering has limited change windows near major shopping peaks — rule changes may need to wait or go through exception path.
+- **Peak season freeze:** Engineering has limited change windows near major shopping peaks, rule changes may need to wait or go through exception path.
 - **BI capacity:** Dashboard work competes with other priorities; MVP reporting must stay small.
-- **No PII in public portfolio copies** of docs if Northline Market later mirrors this structure externally — use masked examples outside internal systems.
-- Promo rules and codes still sit in **more than one system** — the analysis has to spell out which tool is authoritative for which rule until someone funds a real consolidation.
+- **No PII in public portfolio copies** of docs if Northline Market later mirrors this structure externally, use masked examples outside internal systems.
+- Promo rules and codes still sit in **more than one system**, the analysis has to spell out which tool is authoritative for which rule until someone funds a real consolidation.
 
 ---
 
@@ -128,7 +128,7 @@ Rough calendar for the **analysis phase** only (not implementation). Adjust once
 | Solution-facing BA specs | 2 weeks | Dashboard reqs, data reqs, context diagram |
 | UAT + impact pack | 1–2 weeks | UAT plan, test themes, KPI/CBA draft for sponsor |
 
-**Total:** on the order of **8–12 weeks** of focused BA time, often parallelized with workshops — slips if holiday freeze or if Data cannot deliver sample extracts on time.
+**Total:** on the order of **8–12 weeks** of focused BA time, often parallelized with workshops, slips if holiday freeze or if Data cannot deliver sample extracts on time.
 
 ---
 

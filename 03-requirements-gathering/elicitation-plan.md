@@ -1,15 +1,15 @@
-# Elicitation Plan — PromoLeak Radar
+# Elicitation Plan: PromoLeak Radar
 
 **Organization:** Northline Market  
 **Project:** PromoLeak Radar (promotion abuse & revenue leakage)  
 **Owner:** BA  
-**Status:** Working plan — update when sessions are scheduled and after each wave of discovery.
+**Status:** Working plan, update when sessions are scheduled and after each wave of discovery.
 
 ---
 
 ## Purpose of elicitation
 
-Northline Market is losing money through **duplicate accounts**, **first-time coupon reuse**, **referral misuse**, **stacking**, and **deep discounts on low-margin SKUs** — mixed with plain **config mistakes** and **unclear policy ownership**. Elicitation exists so we stop guessing: we need enough fact and opinion on record to write requirements, process, and dashboard asks that Finance, Growth, Engineering, and CS can all recognize.
+Northline Market is losing money through **duplicate accounts**, **first-time coupon reuse**, **referral misuse**, **stacking**, and **deep discounts on low-margin SKUs**, mixed with plain **config mistakes** and **unclear policy ownership**. Elicitation exists so we stop guessing: we need enough fact and opinion on record to write requirements, process, and dashboard asks that Finance, Growth, Engineering, and CS can all recognize.
 
 This phase is **not** to pick a vendor or final architecture. It is to learn how promos and referrals actually behave end-to-end, what data exists, who decides what, and what “fixed” would look like in operations.
 
@@ -22,7 +22,7 @@ This phase is **not** to pick a vendor or final architecture. It is to learn how
 | **Current promotion setup** | Where codes are created, who approves, what systems apply discounts, where rules disagree. |
 | **Coupon / campaign approval** | Who can publish, who can override, what checks happen before go-live. |
 | **Known abuse patterns** | What Fraud and CS already see; what Finance sees in margin variance. |
-| **How leakage is measured today** | Spreadsheets, BI views, or “we don’t” — so we know the gap. |
+| **How leakage is measured today** | Spreadsheets, BI views, or “we don’t”, so we know the gap. |
 | **Dashboard and reporting holes** | What’s missing for daily/weekly ops vs. month-end only. |
 | **Data availability & quality** | Order line, promo application, referral events, identity keys, latency. |
 | **Manual review today** | Who gets a list, from where, how cases close, what gets escalated. |
@@ -105,8 +105,8 @@ Ops Manager joins workshop and reporting review if Northline Market has a centra
 
 ## Open questions to resolve during elicitation
 
-- Does **“one customer”** for promo limits mean account ID only, or email/device/payment linkage — and who owns that definition?
-- **Referral payout trigger:** ship, deliver, first payment capture, or other — and does Finance match that timing in models?
+- Does **“one customer”** for promo limits mean account ID only, or email/device/payment linkage, and who owns that definition?
+- **Referral payout trigger:** ship, deliver, first payment capture, or other, and does Finance match that timing in models?
 - **Marketplace / third-party channel** orders: in scope for v1 analysis or explicitly out?
 - **Kill-switch** for a code: who has authority, how fast can it propagate, and is there audit?
 - **False positive cost:** how many bad flags per week can CS and Fraud absorb before the process collapses?
@@ -117,5 +117,5 @@ Ops Manager joins workshop and reporting review if Northline Market has a centra
 ## Risks to elicitation itself
 
 - People downplay leakage until **anonymized examples** or Finance variance memos are in the room.
-- The engineer who knows promo edge cases is **booked solid** before peak — schedule early or document “unknown until spike.”
-- Growth and Finance schedule separate one-on-ones and never **jointly** agree on definitions — the workshop is mandatory for that.
+- The engineer who knows promo edge cases is **booked solid** before peak, schedule early or document “unknown until spike.”
+- Growth and Finance schedule separate one-on-ones and never **jointly** agree on definitions, the workshop is mandatory for that.

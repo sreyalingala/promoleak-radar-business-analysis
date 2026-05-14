@@ -4,7 +4,7 @@
 
 ---
 
-## US-01 — Finance analyst views daily leakage summary
+## US-01: Finance analyst views daily leakage summary
 
 **As a** finance analyst,  
 **I want** a daily summary of orders flagged for suspected promotion abuse,  
@@ -18,7 +18,7 @@
 
 ---
 
-## US-02 — Investigator drills into order detail
+## US-02: Investigator drills into order detail
 
 **As an** investigator,  
 **I want** to open an order from the flagged list and see applied promos, line categories, and reason codes,  
@@ -32,7 +32,7 @@
 
 ---
 
-## US-03 — Growth owner caps a runaway campaign
+## US-03: Growth owner caps a runaway campaign
 
 **As a** promotions owner,  
 **I want** to reduce or disable a coupon that is exceeding safe margin,  
@@ -46,7 +46,7 @@
 
 ---
 
-## US-04 — CS agent sees disposition
+## US-04: CS agent sees disposition
 
 **As a** customer service agent,  
 **I want** to see whether an account’s discount issue was investigated and closed,  
@@ -59,7 +59,7 @@
 
 ---
 
-## US-05 — Data engineer monitors pipeline health
+## US-05: Data engineer monitors pipeline health
 
 **As a** data engineer,  
 **I want** job failures for promo fact pipelines to alert the on-call channel,  
@@ -74,4 +74,4 @@
 
 ## Backlog / future
 
-- US-06: Self-service threshold simulation (finance sandbox) — **Could**, legal/complexity review first.
+- US-06: Self-service threshold simulation (finance sandbox), **Could**, legal/complexity review first.

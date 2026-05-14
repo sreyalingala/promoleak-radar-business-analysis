@@ -19,12 +19,12 @@
 ## Derived fields (examples)
 
 - **Effective discount %** = total promo $ / pre-discount subtotal (define exclusions for shipping).
-- **Margin after promo** — only if COGS trusted at line level; else flag “margin unknown.”
-- **Linked account score** — definition owned by Fraud/Data; document assumptions.
+- **Margin after promo**, only if COGS trusted at line level; else flag “margin unknown.”
+- **Linked account score**, definition owned by Fraud/Data; document assumptions.
 
 ## Data quality rules (business)
 
-- Orders with **cancelled** or **fully refunded** state excluded from “leakage $” or counted separately — **decision TBD with Finance**.
+- Orders with **cancelled** or **fully refunded** state excluded from “leakage $” or counted separately, **decision TBD with Finance**.
 - Partial refunds: allocate promo impact pro-rata unless finance specifies otherwise.
 
 ## Privacy

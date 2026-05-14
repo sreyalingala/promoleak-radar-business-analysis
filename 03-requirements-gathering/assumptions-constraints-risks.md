@@ -1,4 +1,4 @@
-# Assumptions, Constraints, Risks — PromoLeak Radar
+# Assumptions, Constraints, Risks: PromoLeak Radar
 
 **Organization:** Northline Market  
 **Project:** PromoLeak Radar (duplicate accounts, first-time coupon reuse, referral misuse, stacking, low-margin discount leakage)  
@@ -17,7 +17,7 @@ Refresh this doc after major interviews, the future-state workshop, or any data 
 | A-03 | Referral program rules (milestones, timing, eligibility) exist in **written** policy or admin docs, not only in one person’s head. | Extra discovery cycles; Legal may need to reconstruct terms. |
 | A-04 | A **pilot** can narrow to one category, region, or campaign family without company-wide promo shutdown. | Big-bang pressure; harder to prove value with controlled risk. |
 | A-05 | Growth and Finance will both attend at least one **joint** session to align on metric definitions. | BRD metrics section stays contested; UAT acceptance unclear. |
-| A-06 | Fraud / Risk has capacity to review a **bounded** sample of flagged orders during pilot design — not infinite volume. | Queue design must be more conservative or staffing added. |
+| A-06 | Fraud / Risk has capacity to review a **bounded** sample of flagged orders during pilot design, not infinite volume. | Queue design must be more conservative or staffing added. |
 
 ---
 
@@ -30,7 +30,7 @@ Refresh this doc after major interviews, the future-state workshop, or any data 
 | C-03 | **BI / Data** hours for Northline Market are capped; MVP dashboard must stay small. | Data leadership | Three-to-five headline views first, not twenty tiles. |
 | C-04 | **PII** handling: investigation views follow role-based access; no raw exports to unsecured drives. | Security / Legal | Applies to internal workpapers and portfolio copies. |
 | C-05 | Promo rules and metadata still sit in **more than one system** until a consolidation project exists. | Current state | Requirements must name **authoritative** source per rule type. |
-| C-06 | **Portfolio / public repo** must not hold real customer data — fictional or masked examples only. | This case study | Internal Northline Market wiki may hold real samples under policy. |
+| C-06 | **Portfolio / public repo** must not hold real customer data, fictional or masked examples only. | This case study | Internal Northline Market wiki may hold real samples under policy. |
 
 ---
 
@@ -41,7 +41,7 @@ Refresh this doc after major interviews, the future-state workshop, or any data 
 | R-01 | **Metric definition fights** between Finance and Growth stall decisions. | Med | High | Naming a “headline” metric with footnotes buys time. |
 | R-02 | **Data quality** under-counts leakage or hides category-specific holes. | Med | Med | Manual sample on known bad SKUs; document gaps in BRD. |
 | R-03 | **Over-tight rules** hurt conversion; Growth pulls support for the program. | Med | High | Phased rollout; watch conversion and CS tags weekly after changes. |
-| R-04 | **Alert fatigue** — too many flags → team mutes alerts or ignores queue. | Med | High | Start with fewer triggers; tune weekly in pilot. |
+| R-04 | **Alert fatigue**, too many flags → team mutes alerts or ignores queue. | Med | High | Start with fewer triggers; tune weekly in pilot. |
 | R-05 | **Scope creep** into full payment fraud or identity replacement. | Med | Med | Charter boundaries; log out-of-scope requests for another initiative. |
 | R-06 | **Key engineer** unavailable during discovery → gaps in as-is technical truth. | Med | Med | Book Eng Lead early; written follow-ups to understudies. |
 | R-07 | **Legal delay** on comms templates blocks UAT exit for customer-visible flows. | Low–Med | Med | Early legal slot in communication plan. |
@@ -68,17 +68,17 @@ Refresh this doc after major interviews, the future-state workshop, or any data 
 
 Check off when confirmed; owner in parentheses.
 
-- [ ] **Headline leakage metric** Finance will use in steering (and Growth can live with as a starting point) — *(Finance Manager, Executive Sponsor)*  
-- [ ] **Pilot scope** — category, region, or campaign family for first controls — *(Growth + Finance + Sponsor)*  
-- [ ] **“One customer”** definition for first-time and referral limits (account-only vs. enriched signals) — *(Legal, Eng Lead, Fraud)*  
-- [ ] **Referral payout timing** vs. Finance recognition — documented single rule — *(Finance + Growth)*  
-- [ ] **Marketplace / partner orders** in or out of v1 detection scope — *(Product + Data)*  
-- [ ] **Kill-switch authority** and audit requirements when a code is capped mid-flight — *(Growth + Eng + Legal)*  
-- [ ] **Investigation queue owner** and backup for PTO / weekends — *(Ops or Fraud + Sponsor)*  
-- [ ] **Retention period** for investigation notes and exports — *(Legal)*  
+- [ ] **Headline leakage metric** Finance will use in steering (and Growth can live with as a starting point), *(Finance Manager, Executive Sponsor)*  
+- [ ] **Pilot scope**, category, region, or campaign family for first controls, *(Growth + Finance + Sponsor)*  
+- [ ] **“One customer”** definition for first-time and referral limits (account-only vs. enriched signals), *(Legal, Eng Lead, Fraud)*  
+- [ ] **Referral payout timing** vs. Finance recognition, documented single rule, *(Finance + Growth)*  
+- [ ] **Marketplace / partner orders** in or out of v1 detection scope, *(Product + Data)*  
+- [ ] **Kill-switch authority** and audit requirements when a code is capped mid-flight, *(Growth + Eng + Legal)*  
+- [ ] **Investigation queue owner** and backup for PTO / weekends, *(Ops or Fraud + Sponsor)*  
+- [ ] **Retention period** for investigation notes and exports, *(Legal)*  
 
 ---
 
 ## Sign-off (optional for this working document)
 
-No formal sign-off required for the portfolio copy. At Northline Market, copy **high risks and mitigations** into the official risk register if the PMO requires it — avoid two conflicting versions.
+No formal sign-off required for the portfolio copy. At Northline Market, copy **high risks and mitigations** into the official risk register if the PMO requires it, avoid two conflicting versions.

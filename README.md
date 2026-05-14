@@ -1,6 +1,6 @@
 # PromoLeak Radar: Business Analysis for Promotion Abuse & Revenue Leakage Detection
 
-Documentation-only portfolio case study for a mid-sized e-commerce retailer (**Northline Market** — fictional name). The scenario is promotion abuse and revenue leakage: stacked coupons, duplicate accounts, referral gaming, and discounts applied where margin cannot support them. The repo is written the way a BA would hand off early discovery: clear structure, real artifact types, and honest TBDs where workshops or FP&A would still supply names, dates, and numbers.
+Documentation-only portfolio case study for a mid-sized e-commerce retailer (**Northline Market**, fictional name). The scenario is promotion abuse and revenue leakage: stacked coupons, duplicate accounts, referral gaming, and discounts applied where margin cannot support them. The repo is written the way a BA would hand off early discovery: clear structure, real artifact types, and honest TBDs where workshops or FP&A would still supply names, dates, and numbers.
 
 ---
 
@@ -20,18 +20,18 @@ PromoLeak Radar is a full BA documentation set for scoping how the business woul
 
 ## 3. Why this project matters
 
-Promotion economics sit between **Growth** (conversion, acquisition) and **Finance** (margin, forecast). Without shared definitions, reporting, and rules of engagement, teams debate different spreadsheets while leakage continues. This work matters because it shows how a BA **narrows the problem**, **documents requirements and rules**, **models handoffs and escalation**, and **connects delivery to acceptance and KPIs** — so engineering and leadership can decide what to build with less rework and fewer “we didn’t know that was in scope” moments.
+Promotion economics sit between **Growth** (conversion, acquisition) and **Finance** (margin, forecast). Without shared definitions, reporting, and rules of engagement, teams debate different spreadsheets while leakage continues. This work matters because it shows how a BA **narrows the problem**, **documents requirements and rules**, **models handoffs and escalation**, and **connects delivery to acceptance and KPIs**, so engineering and leadership can decide what to build with less rework and fewer “we didn’t know that was in scope” moments.
 
 ---
 
 ## 4. Project objectives
 
-1. **Scope and sponsor alignment** — Charter-level in/out scope and who decides policy vs. technical trade-offs.
-2. **Requirements fit for sizing** — BRD, FRs, NFRs, and draft business rules written so delivery can estimate effort and dependencies.
-3. **Process clarity** — As-is pain points, to-be operating model, and escalation when abuse or misconfiguration spikes.
-4. **Solution-facing specs (BA-owned)** — Dashboard requirements, data entity view, system context; no production code in this repo.
-5. **Quality path** — UAT plan, sample test cases, defect fields; traceability from needs to test themes.
-6. **Impact framing** — KPI set, cost–benefit skeleton, and a short sponsor recommendation tied to those metrics.
+1. **Scope and sponsor alignment**, Charter-level in/out scope and who decides policy vs. technical trade-offs.
+2. **Requirements fit for sizing**, BRD, FRs, NFRs, and draft business rules written so delivery can estimate effort and dependencies.
+3. **Process clarity**, As-is pain points, to-be operating model, and escalation when abuse or misconfiguration spikes.
+4. **Solution-facing specs (BA-owned)**, Dashboard requirements, data entity view, system context; no production code in this repo.
+5. **Quality path**, UAT plan, sample test cases, defect fields; traceability from needs to test themes.
+6. **Impact framing**, KPI set, cost–benefit skeleton, and a short sponsor recommendation tied to those metrics.
 
 ---
 
@@ -41,16 +41,16 @@ This project is intentionally documentation-heavy. It demonstrates:
 
 | Skill area | Where it shows up in the repo |
 |------------|-------------------------------|
-| **Stakeholder analysis** | `02-stakeholder-analysis/` — register, RACI, communication plan |
-| **Requirements gathering** | `03-requirements-gathering/` — elicitation plan, interview questions, workshop agenda, assumptions / constraints / risks |
+| **Stakeholder analysis** | `02-stakeholder-analysis/`, register, RACI, communication plan |
+| **Requirements gathering** | `03-requirements-gathering/`, elicitation plan, interview questions, workshop agenda, assumptions / constraints / risks |
 | **BRD creation** | `04-business-requirements/business-requirements-document.md` |
 | **Functional and non-functional requirements** | `04-business-requirements/functional-requirements.md`, `non-functional-requirements.md` |
 | **Business rules** | `04-business-requirements/business-rules.md` |
-| **Process modeling** | `05-process-modeling/` — as-is, to-be, escalation workflow |
-| **User stories and acceptance criteria** | `06-user-stories/` — backlog themes, stories with Given/When/Then style acceptance |
+| **Process modeling** | `05-process-modeling/`, as-is, to-be, escalation workflow |
+| **User stories and acceptance criteria** | `06-user-stories/`, backlog themes, stories with Given/When/Then style acceptance |
 | **Requirements traceability** | `07-traceability/requirements-traceability-matrix.md` |
 | **Dashboard requirements** | `08-solution-design/dashboard-requirements.md`, `dashboard-wireframe.md` |
-| **UAT planning** | `09-testing-uat/` — UAT plan, test cases, defect log template |
+| **UAT planning** | `09-testing-uat/`, UAT plan, test cases, defect log template |
 | **KPI framework** | `10-business-impact/kpi-framework.md` |
 | **Business impact analysis** | `10-business-impact/cost-benefit-analysis.md`, `final-recommendation.md` |
 
@@ -95,16 +95,16 @@ Supporting context: project charter, business case, and problem statement in `01
 
 A sensible read order if you want to follow how the analysis would unfold on the job:
 
-1. **Charter & problem** — `01-project-overview/`  
-2. **Who is involved and how decisions travel** — `02-stakeholder-analysis/`  
-3. **How discovery would run** — `03-requirements-gathering/`  
-4. **What the business asks for** — `04-business-requirements/`  
-5. **How work happens today vs. target** — `05-process-modeling/`  
-6. **Backlog and stories for delivery discussion** — `06-user-stories/`  
-7. **Traceability for test planning** — `07-traceability/`  
-8. **What reporting and data need** — `08-solution-design/`  
-9. **How we’d prove it in UAT** — `09-testing-uat/`  
-10. **How we’d judge success and cost** — `10-business-impact/`  
+1. **Charter & problem**, `01-project-overview/`  
+2. **Who is involved and how decisions travel**, `02-stakeholder-analysis/`  
+3. **How discovery would run**, `03-requirements-gathering/`  
+4. **What the business asks for**, `04-business-requirements/`  
+5. **How work happens today vs. target**, `05-process-modeling/`  
+6. **Backlog and stories for delivery discussion**, `06-user-stories/`  
+7. **Traceability for test planning**, `07-traceability/`  
+8. **What reporting and data need**, `08-solution-design/`  
+9. **How we’d prove it in UAT**, `09-testing-uat/`  
+10. **How we’d judge success and cost**, `10-business-impact/`  
 
 That order mirrors a common path: **frame → people → elicit → specify → process → backlog → trace → solution notes → test → impact**.
 
@@ -118,7 +118,7 @@ If implemented against these requirements, the business would expect:
 - **Fewer cross-team arguments** over “the real number” when Finance, Growth, and ops share the same definitions and feeds.  
 - **Faster containment** when stacking, eligibility, or referral rules need a cap, kill-switch, or investigation queue.  
 - **Clearer customer handling** when CS has disposition context and Legal-approved language where enforcement applies.  
-- **Measurable trade-offs** via the KPI framework and CBA — so margin moves can be weighed against conversion and CS load instead of one-off opinions.  
+- **Measurable trade-offs** via the KPI framework and CBA, so margin moves can be weighed against conversion and CS load instead of one-off opinions.  
 
 Figures in the CBA are placeholders until a real FP&A model and implementation costs are attached; the structure shows how a BA supports that conversation.
 

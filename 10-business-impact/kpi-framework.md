@@ -1,10 +1,10 @@
-# KPI Framework — PromoLeak Radar
+# KPI Framework: PromoLeak Radar
 
 Rough yardsticks so we can tell if we’re plugging leaks without quietly trashing conversion or CS morale. Numbers stay TBD until FP&A and Data plug baseline.
 
 ## Headline metric (sponsor picks one)
 
-**Candidate:** gross margin after promotions on the high-risk category set — weekly, with footnotes on what’s in the “abuse-related adjustment” bucket.
+**Candidate:** gross margin after promotions on the high-risk category set, weekly, with footnotes on what’s in the “abuse-related adjustment” bucket.
 
 ## Operational KPIs
 
@@ -38,4 +38,4 @@ Rough yardsticks so we can tell if we’re plugging leaks without quietly trashi
 
 ## Fairness / sensitive attributes
 
-If we start using attributes that could look like protected-class targeting, pull Legal / data ethics in **before** UAT — not a hypothetical for this doc until someone proposes those fields.
+If we start using attributes that could look like protected-class targeting, pull Legal / data ethics in **before** UAT, not a hypothetical for this doc until someone proposes those fields.

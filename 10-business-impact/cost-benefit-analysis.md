@@ -27,7 +27,7 @@ Payback months = (one-time implementation) / (monthly recurring benefit). **Do n
 
 ## Sensitivity
 
-- Investigation-heavy if the false positive rate is ugly — model FTE cost honestly.
+- Investigation-heavy if the false positive rate is ugly, model FTE cost honestly.
 - If Growth throttles promos hard, bake in conversion / revenue hit on the cost side, not only the savings side.
 
 ## Decision record

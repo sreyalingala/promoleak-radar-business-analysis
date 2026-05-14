@@ -1,7 +1,7 @@
-# Communication Plan — PromoLeak Radar
+# Communication Plan: PromoLeak Radar
 
 **Organization:** Northline Market  
-**Project:** PromoLeak Radar (promotion leakage — duplicate accounts, first-time coupon reuse, referral misuse, stacking, low-margin discount issues)  
+**Project:** PromoLeak Radar (promotion leakage, duplicate accounts, first-time coupon reuse, referral misuse, stacking, low-margin discount issues)  
 **Audience:** Internal stakeholders only unless Legal clears external messaging.
 
 ## What we’re trying to avoid

@@ -1,7 +1,7 @@
-# Stakeholder Register — PromoLeak Radar
+# Stakeholder Register: PromoLeak Radar
 
 **Organization:** Northline Market (fictional mid-sized e-commerce)  
-**Project:** PromoLeak Radar — promotion abuse & revenue leakage analysis  
+**Project:** PromoLeak Radar, promotion abuse & revenue leakage analysis  
 **Maintained by:** BA  
 **Review cadence:** After major workshops, org changes, or if someone’s role on promos shifts.
 

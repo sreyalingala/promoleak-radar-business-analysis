@@ -1,7 +1,7 @@
-# Business Case — PromoLeak Radar
+# Business Case: PromoLeak Radar
 
 **Organization:** Northline Market  
-**Document status:** Draft — for internal discussion with Finance and Growth  
+**Document status:** Draft, for internal discussion with Finance and Growth  
 **Owners:** Finance (primary narrative) + Growth (policy and customer impact)
 
 ---
@@ -18,9 +18,9 @@ Promotions include sitewide and targeted coupons, **first-time buyer** discounts
 
 - **Duplicate accounts** and related identities used to claim first-time offers or referral rewards more than once.
 - **First-time coupon reuse** across accounts that share payment, address, or device patterns (exact detection TBD with Engineering).
-- **Referral misuse** — self-referrals, closed loops among linked accounts, or payouts before the business considers the referee “real.”
+- **Referral misuse**, self-referrals, closed loops among linked accounts, or payouts before the business considers the referee “real.”
 - **Coupon stacking** or ordering issues so effective discount exceeds what Growth thought they published, especially on **low-margin** products.
-- **High discounts on low-margin SKUs** — either through category exclusions not enforced, or through combinations nobody tested before go-live.
+- **High discounts on low-margin SKUs**, either through category exclusions not enforced, or through combinations nobody tested before go-live.
 
 Pain is not only “bad customers.” **Config mistakes** and **unclear ownership** of who can publish a stackable code show up in the same incident reviews as abuse.
 
@@ -45,9 +45,9 @@ Finish the **PromoLeak Radar** analysis phase: documented problem, stakeholders,
 
 Implementation direction (not decided in this document alone) is expected to combine:
 
-1. **Rule and process fixes** where Growth and Legal agree — caps, stacking clarity, category exclusions, referral milestone tightening.
-2. **Visibility** — reporting/dashboard so Finance and ops see flagged volume, campaign concentration, and queue depth without waiting for month-end.
-3. **Workflow** — who investigates, how cases close, how CS learns disposition, how escalation runs when a code misbehaves at scale.
+1. **Rule and process fixes** where Growth and Legal agree, caps, stacking clarity, category exclusions, referral milestone tightening.
+2. **Visibility**, reporting/dashboard so Finance and ops see flagged volume, campaign concentration, and queue depth without waiting for month-end.
+3. **Workflow**, who investigates, how cases close, how CS learns disposition, how escalation runs when a code misbehaves at scale.
 
 Heavy **fraud platform** spend stays off the table until requirements show it’s necessary; Northline Market may get far with better rules + reporting first.
 
@@ -57,8 +57,8 @@ Heavy **fraud platform** spend stays off the table until requirements show it’
 
 - **Fewer dollars left on the table** from known failure modes (stacking, wrong category, referral gaming) once rules and monitoring match intent.
 - **Less time in cross-team arguments** when everyone references the same definitions and extracts.
-- **Faster containment** when a campaign runs hot — kill-switch, cap, or pause path with audit trail.
-- **Cleaner handoff to Engineering** — sized backlog tied to acceptance criteria instead of reactive tickets only.
+- **Faster containment** when a campaign runs hot, kill-switch, cap, or pause path with audit trail.
+- **Cleaner handoff to Engineering**, sized backlog tied to acceptance criteria instead of reactive tickets only.
 - **Better customer experience** when restrictions follow a documented path and CS has aligned scripts.
 
 Quantified NPV and payback belong here after FP&A assigns a leakage range and Engineering/vendor quotes implementation. Until then, treat dollar claims as **TBD**.

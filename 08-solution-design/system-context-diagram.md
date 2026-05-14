@@ -51,10 +51,10 @@ flowchart LR
 ## Boundaries
 
 - **In scope for this analysis:** feeds and flows we need to flag orders and feed dashboard + case tool.
-- **Out for now:** WMS, physical returns handling — except where refunds change net promo dollars.
+- **Out for now:** WMS, physical returns handling, except where refunds change net promo dollars.
 
 - PII minimized on Dash by role.
-- Any new SaaS goes through normal vendor security — list TBD.
+- Any new SaaS goes through normal vendor security, list TBD.
 
 ## Follow-up
 

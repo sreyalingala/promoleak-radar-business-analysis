@@ -1,4 +1,4 @@
-# Product Backlog — PromoLeak Radar (MVP-oriented)
+# Product Backlog: PromoLeak Radar (MVP-oriented)
 
 **Notes:** Priority column is for planning fights, not a contract. IDs are just for tracing.
 
@@ -26,7 +26,7 @@
 
 ## Parking lot
 
-- Partner marketplace-specific backlog items — deferred until scope includes partners.
+- Partner marketplace-specific backlog items, deferred until scope includes partners.
 
 ## Refinement log
 

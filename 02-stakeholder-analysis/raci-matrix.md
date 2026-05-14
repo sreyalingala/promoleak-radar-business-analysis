@@ -1,4 +1,4 @@
-# RACI Matrix — PromoLeak Radar
+# RACI Matrix: PromoLeak Radar
 
 **Organization:** Northline Market  
 **Legend:** **R** = Responsible (does the work) · **A** = Accountable (approves / owns outcome) · **C** = Consulted (input required) · **I** = Informed (kept in the loop)
@@ -21,7 +21,7 @@ One **A** per row where possible. Adjust if Northline Market splits accountabili
 
 - **Confirm business problem:** Finance pulls together the margin and promo-variance story; Sponsor signs off that the problem is worth a structured program.
 - **Review promotion policy gaps:** Growth owns what was *intended* to be published; Legal helps where terms and enforcement overlap; others comment so Finance and Fraud aren’t guessing.
-- **Gather stakeholder requirements:** Product Manager is accountable for a coherent backlog-facing set of inputs; the BA (not on this matrix) usually facilitates—here PM holds the **A** so one neck is visible for delivery handoff.
+- **Gather stakeholder requirements:** Product Manager is accountable for a coherent backlog-facing set of inputs; the BA (not on this matrix) usually facilitates, here PM holds the **A** so one neck is visible for delivery handoff.
 - **Define abuse detection rules:** Finance **A** on economic thresholds and what “material” means; Fraud **R** to draft rule themes with Eng/Data support; Growth consulted so legitimate campaigns don’t get accidentally classified as abuse.
 - **Review data availability:** Data **A** on whether the warehouse can support definitions; Data **R** to document gaps; Eng consulted for source systems.
 - **Approve dashboard KPIs:** Finance **A** on headline metrics that go to leadership; Data **R** on definitions and feasibility.

@@ -1,4 +1,4 @@
-# Escalation Workflow — Suspected Promotion Abuse
+# Escalation Workflow: Suspected Promotion Abuse
 
 **Use when:** Automated flag or manual referral exceeds investigator authority, legal sensitivity spikes, or technical incident affects promo application broadly.
 
@@ -15,7 +15,7 @@
 
 - **L1:** Confirm/deny, document, close or route.
 - **L2:** Pause the specific campaign if there’s a kill-switch; keep blast radius small (don’t turn off unrelated codes by accident).
-- **L3:** Consider temporary hold on new referrals or global cap — **sponsor approval** if customer-visible.
+- **L3:** Consider temporary hold on new referrals or global cap, **sponsor approval** if customer-visible.
 - **L4:** External comms only through Legal-approved channels.
 
 ## Information to attach on escalation

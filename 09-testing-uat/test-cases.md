@@ -1,13 +1,13 @@
 # Test Cases (Sample Set)
 
-Starter pack for UAT — extend when fixtures and real campaign codes exist.
+Starter pack for UAT, extend when fixtures and real campaign codes exist.
 
 **Project:** PromoLeak Radar  
 **Prefix:** TC-* maps to RTM when filled.
 
 ## Reporting
 
-### TC-REPORT-01 — Daily summary loads for standard date
+### TC-REPORT-01: Daily summary loads for standard date
 
 | Field | Value |
 |-------|--------|
@@ -16,7 +16,7 @@ Starter pack for UAT — extend when fixtures and real campaign codes exist.
 | Expected | Totals visible; footnote for “at risk” present; refresh timestamp ≤ SLA |
 | Priority | High |
 
-### TC-REPORT-02 — Filter by campaign
+### TC-REPORT-02: Filter by campaign
 
 | Field | Value |
 |-------|--------|
@@ -27,7 +27,7 @@ Starter pack for UAT — extend when fixtures and real campaign codes exist.
 
 ## Workflow
 
-### TC-WF-01 — Status transition audit
+### TC-WF-01: Status transition audit
 
 | Field | Value |
 |-------|--------|
@@ -36,7 +36,7 @@ Starter pack for UAT — extend when fixtures and real campaign codes exist.
 | Expected | Two entries with timestamps and user IDs; prior status preserved |
 | Priority | High |
 
-### TC-WF-02 — Unauthorized access denied
+### TC-WF-02: Unauthorized access denied
 
 | Field | Value |
 |-------|--------|
@@ -47,7 +47,7 @@ Starter pack for UAT — extend when fixtures and real campaign codes exist.
 
 ## Rules / promo admin
 
-### TC-RULE-01 — Cap change applies to new carts
+### TC-RULE-01: Cap change applies to new carts
 
 | Field | Value |
 |-------|--------|
@@ -58,7 +58,7 @@ Starter pack for UAT — extend when fixtures and real campaign codes exist.
 
 ## Negative / edge
 
-### TC-EDGE-01 — Pipeline failure banner
+### TC-EDGE-01: Pipeline failure banner
 
 | Field | Value |
 |-------|--------|
@@ -68,7 +68,7 @@ Starter pack for UAT — extend when fixtures and real campaign codes exist.
 
 ## Data reconciliation (finance)
 
-### TC-FIN-01 — Tie-out sample
+### TC-FIN-01: Tie-out sample
 
 | Field | Value |
 |-------|--------|
