@@ -1,52 +1,24 @@
-# Non-Functional Requirements (NFRs)
+# Non-Functional Requirements: PromoLeak Radar
 
-**Project:** PromoLeak Radar  
-**Note:** Targets are starting points for discussion with Engineering and Security. Replace TBD with agreed SLAs.
+> **Note:** NFRs below apply to the **Northline Market** case study. Targets use **TBD** where a real program would plug SLAs from Engineering, Security, and Legal. Stakeholders must validate before contract or release sign-off.
 
-## Performance
+**Project:** PromoLeak Radar
 
-| ID | Statement |
-|----|------------|
-| NFR-01 | Dashboard primary views shall load within **TBD seconds** for typical date ranges on standard office networks. |
-| NFR-02 | Overnight batch completion before **TBD local time** for prior-day metrics used in morning ops review. |
+---
 
-## Security & privacy
+## Non-functional requirements
 
-| ID | Statement |
-|----|------------|
-| NFR-10 | Role-based access: only fraud/investigation roles see PII needed for case review; finance sees aggregates unless approved. |
-| NFR-11 | Audit logs retained per **organizational retention policy** (link TBD). |
-| NFR-12 | No production customer data in development environments without masking approval. |
-
-## Availability & reliability
-
-| ID | Statement |
-|----|------------|
-| NFR-20 | Target uptime for monitoring UI: **TBD** (e.g., 99.5% excluding planned maintenance). |
-| NFR-21 | If the “near real-time” path dies, batch numbers should still load with a clear “stale / partial” banner — not a silent wrong day. |
-
-## Usability
-
-| ID | Statement |
-|----|------------|
-| NFR-30 | Primary dashboards usable by a trained finance or ops analyst **without SQL**. |
-| NFR-31 | Filters and reason codes use the same words CS and Growth use in meetings; glossary doc still TBD. |
-
-## Maintainability & support
-
-| ID | Statement |
-|----|------------|
-| NFR-40 | Threshold and rule metadata versioned; users can see **what version** produced a flag for a given date. |
-| NFR-41 | Runbook location documented for on-call (owner TBD). |
-
-## Compliance
-
-| ID | Statement |
-|----|------------|
-| NFR-50 | Customer comms templates for enforcement actions reviewed by Legal before production use. |
-
-## Observability
-
-| ID | Statement |
-|----|------------|
-| NFR-60 | Pipeline jobs emit success/failure metrics and alerts to **TBD channel**. |
+| Requirement ID | Category | Requirement | Rationale | Priority | Validation method |
+|----------------|----------|-------------|-----------|----------|---------------------|
+| NFR-001 | Performance | Primary dashboard views for default filters load within **TBD** seconds on a standard office connection. Nightly or agreed batch jobs that feed leakage metrics complete before **TBD** local time for morning review. | Slow UI and stale numbers kill adoption and incident response. | Must | Load or timing test in UAT; job monitoring with alert on SLA breach |
+| NFR-002 | Security | Authentication uses Northline Market **corporate IdP** (SSO) or agreed standard; no standalone prod passwords for admin paths; session timeout per security policy. | Central identity and MFA reduce account takeover risk. | Must | Security checklist in UAT |
+| NFR-003 | Privacy | PII in investigation views is **masked or role-gated** per Legal table; exports require role, are logged, and use approved column sets. | Investigators need enough context without over-sharing PII. | Must | Role matrix test; Legal spot check on sample export |
+| NFR-004 | Availability | PromoLeak monitoring UI target uptime **TBD** excluding published maintenance; graceful message if partial data load fails. | If the tool is down during an incident, teams revert to spreadsheets. | Should | Uptime report from hosting or SRE; UAT failure-path test |
+| NFR-005 | Auditability | Audit events for configuration, kill-switch, case status, and exports are **append-only** in production configuration; retention meets Legal schedule. | Disputes and internal investigations need a defensible trail. | Must | Config review; sample audit export |
+| NFR-006 | Usability | A trained Finance or Fraud user completes primary dashboard tasks in the **guided UAT script** without writing SQL. | Self-serve cuts load on Data for routine questions. | Must | UAT pass or fail with timing notes |
+| NFR-007 | Scalability | Design supports **TBD** peak daily order volume and **TBD** concurrent investigators without redesign of core fact tables (headroom documented by Engineering). | Peak promos and queue spikes stress the system. | Should | Written capacity statement; optional load test |
+| NFR-008 | Data retention | Investigation artifacts and exports follow **retention schedule TBD**; purge or legal hold path documented and owned. | Retention mistakes create Legal and privacy exposure. | Must | Legal sign-off on retention; job owner in runbook |
+| NFR-009 | Maintainability | Threshold and scoring changes use **configuration or admin paths** where design allows, so Finance and Fraud are not blocked on every software release. | Tuning is frequent early in a pilot. | Should | UAT demo of config change without code deploy |
+| NFR-010 | Reporting accuracy | Headline leakage metrics reconcile to a **Finance tie-out sample** within **TBD** tolerance, or variance is documented with cause. | Wrong numbers waste executive trust and drive bad caps. | Must | Reconciliation test case in UAT (see test pack) |
+| NFR-011 | Access control | **Least privilege**: aggregate-only roles cannot open full investigation panes; admin actions limited to named roles; deny attempts logged. | Stops casual spread of sensitive data. | Must | Negative permission tests in UAT |
+| NFR-012 | Compliance review | Customer-facing templates for enforcement, clawback, or restriction carry **Legal approval** and version id before production enablement. | Copy drift creates enforceability and brand risk. | Must | Legal sign-off item on release checklist |
