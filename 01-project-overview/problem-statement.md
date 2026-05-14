@@ -29,7 +29,7 @@ Evidence below mixes **Finance and CS themes** with **engineering incident histo
 
 These are **themes** for discovery, not a final RCA. Engineering and Data will validate.
 
-1. **Policy vs. system mismatch**, What Growth intends (stack rules, one-per-customer, category exclusions) is not always what checkout and the promo engine enforce.
+1. **Policy vs. system mismatch:** What Growth intends (stack rules, one-per-customer, category exclusions) is not always what checkout and the promo engine enforce.
 2. **Identity and eligibility**, “One customer” is not consistently defined across account, email, device, and payment signals; duplicate account creation exploits that gap.
 3. **Referral design and timing**, Payout triggers or milestones may be too early or too loose relative to genuine acquisition economics.
 4. **Operational gaps**, No single owner for pre-flight checks on high-risk campaigns; weak handoff when Finance flags a code as “too hot.”
