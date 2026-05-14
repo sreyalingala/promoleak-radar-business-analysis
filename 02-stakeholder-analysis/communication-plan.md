@@ -1,32 +1,43 @@
-# Communication Plan
+# Communication Plan — PromoLeak Radar
 
-**Project:** PromoLeak Radar  
-**Audience:** Internal stakeholders only unless Legal approves external messaging
+**Organization:** Northline Market  
+**Project:** PromoLeak Radar (promotion leakage — duplicate accounts, first-time coupon reuse, referral misuse, stacking, low-margin discount issues)  
+**Audience:** Internal stakeholders only unless Legal clears external messaging.
 
 ## What we’re trying to avoid
 
-- Finance and Growth each running their own version of the truth in parallel spreadsheets.
-- CS blindsided by a rule change the same day tickets spike.
-- Eng getting “we decided in the room” with nothing in writing.
+- Finance and Growth circulating **different spreadsheets** with the same campaign names and different totals.
+- Customer Support hearing about a rule change from angry customers first.
+- Engineering getting verbal decisions from a workshop with **nothing written** in Confluence / email / ticket.
 
-## Channels
+---
 
-| Channel | Purpose | Owner | Frequency |
-|---------|---------|-------|-----------|
-| Steering sync (30–45 min) | Decisions, scope, risks | Sponsor chair | Biweekly during active phase |
-| Working session | Process / rules detail | BA + Product | Weekly as needed |
-| Slack / Teams channel | Quick clarifications | BA | As needed; decisions still copied to wiki/email |
-| Written status (1-pager) | Exec visibility | BA | Weekly during peak; monthly when quiet |
+## Cadence table
 
-## Escalation (comms-related)
+| Meeting or communication type | Audience | Frequency | Purpose | Format / channel | Owner | Notes |
+|-------------------------------|-----------|-----------|---------|------------------|-------|-------|
+| **Discovery interviews** | Rotating SMEs (Finance, Growth, Fraud, CS, Data, Eng) | 2–3 per week during discovery burst | Pull facts on how promos break, who fixes what, what data exists | 45–60 min video or room; BA sends questions 24h ahead | BA (facilitate); PM looped on scheduling | Record only if policy allows; otherwise two note-takers on hot topics |
+| **Steering / sponsor check-in** | Exec Sponsor, Finance Mgr, Growth Mgr, PM | Biweekly while active | Scope, decisions, risks, date pressure | 30 min live; pre-read 1-pager | PM or BA | Keep to decisions; park deep policy debates for working session |
+| **Weekly working session** | PM, Eng Lead, Data Analyst, Fraud Analyst, Growth delegate | Weekly | Policy vs. system gaps, rule drafts, dashboard MVP scope | Whiteboard or Miro + actions list | PM chairs; BA captures | Rotate Growth vs. Finance “voice” so both show up over a month |
+| **Requirements review** | PM, Eng Lead, Finance, Growth, Data | Weekly or biweekly as docs stabilize | Walk BRD/FR slices; flag feasibility and dependencies | Screen share + annotated doc | PM | Send diff or “what changed” section so people don’t reread everything |
+| **KPI review** | Finance Mgr, Data Analyst, Growth Mgr, Fraud Analyst, Ops Mgr | After first dashboard draft; then as needed | Agree headline metrics, footnotes, and “good enough” definitions | Working meeting + follow-up in writing | Finance Mgr owns metric sign-off; Data runs numbers live if possible | If Growth disputes a definition, escalate to Sponsor same week |
+| **Risk / Legal check-in** | Legal, Growth Mgr, Fraud Analyst, PM, CS Manager | Biweekly during rules work; ad hoc if customer-visible change | Referral clawback language, “abuse” vs policy wording, fair treatment | 30 min + email summary | Legal rep schedules | Don’t skip before stacking or referral payout changes hit UAT |
+| **Data deep-dive** | Data Analyst, Eng Lead, Fraud Analyst, Finance analyst (optional) | One or two half-days early | Order/promo/referral feeds, join keys, latency | Screen share + notes to `08-solution-design/data-requirements.md` | Data Analyst leads | Bring anonymized examples only |
+| **UAT planning session** | PM, CS Manager, Finance delegate, Fraud Analyst, QA (if any) | Once before UAT cycle | Scope of UAT, environments, roles, exit criteria | Workshop + written UAT plan update | PM | CS must see disposition scenarios, not only happy path |
+| **Final recommendation review** | Exec Sponsor, Finance Mgr, Growth Mgr, Legal, PM | Once at analysis close | Sponsor decision on next investment phase (build/buy, pilot scope) | 45 min + written recommendation | Exec Sponsor chairs; Finance presents economics | Growth gets pre-read 48h ahead to reduce surprises |
 
-- Disagreement on rule interpretation (e.g., “stacking allowed?”) → Growth + Finance joint session; escalate to sponsor if no resolution in 5 business days.
-- Customer-facing incident during pilot → CS lead notifies Legal + Growth same day.
+## Async / written
 
-## Meetings vs. async
+| Type | Audience | Frequency | Purpose | Format | Owner |
+|------|-----------|-----------|---------|--------|-------|
+| **Written status (short)** | Sponsor + PM + Finance lead | Weekly during heavy discovery | What moved, what’s blocked, decisions needed | Email or wiki | BA or PM |
+| **Teams / Slack channel** | Core working group | Ongoing | Quick clarifications | Chat; **decisions** copied to email or ticket same day | PM or BA |
 
-Skip a meeting when a board photo + typed summary or a 48h async review on a wireframe will do. Same-day post for workshop notes (whiteboard pic + bullets) so people who weren’t in the room don’t get a second-hand version.
+## Escalation (comms)
+
+- **Stacking or policy interpretation deadlocked** (Growth vs. Finance): joint 60 min; if still stuck in 5 business days → Executive Sponsor picks a pilot path or defers change with written rationale.
+- **Customer-visible incident during pilot** (e.g., mass reward clawback): CS Manager notifies Legal + Growth same day; PM pulls Eng/Data into a bridge if tooling failed.
 
 ## Open points
 
-- Where the *company* wants master docs (Confluence vs. GitHub vs. both). This repo is my portfolio copy; don’t treat it as the corporate record unless someone says so.
+- Where Northline Market stores the **master copy** of these docs (Confluence vs. internal wiki vs. this portfolio repo for interviews only).
