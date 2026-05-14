@@ -208,7 +208,7 @@
 | **Priority** | Must Have |
 | **User story** | As a **Finance Manager**, I want **exports with role-appropriate columns**, so that **I can take a board pack slice without leaking PII to people who should only see aggregates**. |
 | **Acceptance criteria** | **Given** my role is aggregate-only, **when** I request an export, **then** PII columns are absent and the attempt is logged. **Given** my role is investigator, **when** I export, **then** I only see Legal-approved columns and the export is logged. |
-| **Business notes** | Legal attaches the approved column matrix to the release record (NFR-012 culture, not only templates). |
+| **Business notes** | Legal attaches the approved column matrix to the release record (same gate as NFR-012 templates). |
 
 ---
 
