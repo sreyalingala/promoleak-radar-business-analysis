@@ -9,7 +9,7 @@ Northline Market still runs aggressive promos, but **before** and **after** capt
 ## Future-state design principles
 
 - **Policy and system match:** What Growth publishes is what checkout enforces, versioned and auditable.
-- **Don’t boil the ocean in v1:** Batch scoring plus a small queue beats a perfect real-time model that never ships.
+- **Don't boil the ocean in v1:** Batch scoring plus a small queue beats a perfect real-time model that never ships.
 - **Named ownership:** Someone is on the hook for queue depth, threshold tuning, and kill-switch decisions.
 - **Finance-grade definitions:** Headline metrics have a footnoted spec Finance signed.
 - **CS is not last to know:** Customer-visible actions use approved scripts and visible disposition.
@@ -45,7 +45,7 @@ flowchart TD
   E -->|High| H --> I --> J --> K
 ```
 
-**Reality hook:** “Hold” on high risk may be soft (flag only) in early pilot until Legal approves harder blocks. Call that out in rollout notes, not in the diagram above, or you over-promise.
+**Reality hook:** "Hold" on high risk may be soft (flag only) in early pilot until Legal approves harder blocks. Call that out in rollout notes, not in the diagram above, or you over-promise.
 
 ---
 
@@ -53,7 +53,7 @@ flowchart TD
 
 1. **Customer applies coupon** (or referral is in play on the same journey). Same storefront paths as today, but behind the scenes more data is read.
 2. **System validates campaign rules** against the **authoritative** rule store for that campaign (not a stale spreadsheet). Stacking order is deterministic.
-3. **Identity and promo history checks** run against Northline Market’s agreed definition of “customer” and lookback windows (see `04-business-requirements/business-rules.md`). This is where duplicate accounts and first-time reuse get caught **before** or **right after** capture, depending on architecture.
+3. **Identity and promo history checks** run against Northline Market's agreed definition of "customer" and lookback windows (see `04-business-requirements/business-rules.md`). This is where duplicate accounts and first-time reuse get caught **before** or **right after** capture, depending on architecture.
 4. **Risk score** combines signals (stack stress, margin floor breach, referral pattern, velocity). Weights are versioned so Finance can explain month-over-month jumps.
 5. **Low risk** orders flow with minimal added latency (exact latency is an NFR spike).
 6. **Medium risk** orders complete but are **logged** for monitoring, cohort review, and threshold tuning. Marketing may get a weekly digest, not a page at 2 a.m. for every medium hit.
@@ -67,7 +67,7 @@ flowchart TD
 
 | Control | Purpose |
 |---------|---------|
-| Authoritative rule + version id | Stops “we didn’t mean to stack that” drift |
+| Authoritative rule + version id | Stops "we didn't mean to stack that" drift |
 | Identity and history checks | Cuts duplicate and first-time reuse |
 | Risk scoring | Prioritizes humans and reduces blind firefighting |
 | Manual review queue + SLA | Work is visible, not in Slack threads |
@@ -93,7 +93,7 @@ flowchart TD
 
 - **Earlier** detection of runaway campaigns and abusive cohorts (days, not only post-close).
 - **Less** revenue loss on low-margin SKUs from unchecked stacking and misconfiguration.
-- **Fewer** “mystery” CS credits because disposition and policy line up.
+- **Fewer** "mystery" CS credits because disposition and policy line up.
 - **Faster** internal alignment when everyone references the same dashboard slice and BRD definitions.
 
 ---

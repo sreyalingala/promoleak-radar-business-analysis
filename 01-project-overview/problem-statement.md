@@ -16,11 +16,11 @@ Northline Market is experiencing **promotion-related revenue leakage**: promotio
 
 Evidence below mixes **Finance and CS themes** with **engineering incident history**, still needs to be backed by a formal data pull; treat as the working list of what people are seeing in meetings and tickets.
 
-- **Margin after promotions** below plan on specific categories quarter over quarter; variance memos cite “promo mix” as a recurring line item.
+- **Margin after promotions** below plan on specific categories quarter over quarter; variance memos cite "promo mix" as a recurring line item.
 - **Duplicate or clustered accounts** opening orders with first-time or high-value codes in short windows; fraud/CS anecdotes (counts TBD).
-- **Referral payouts** where referee behavior does not match a “normal” new customer path (e.g., immediate churn, same payment fingerprint as referrer, definitions TBD with Legal).
+- **Referral payouts** where referee behavior does not match a "normal" new customer path (e.g., immediate churn, same payment fingerprint as referrer, definitions TBD with Legal).
 - **Stacking outcomes** that do not match what Growth believed they published, sometimes traced to application order, sometimes to a config push that did not match the runbook.
-- **Low-margin SKUs** (e.g., consumables, accessories tied to low-list categories) showing **effective discounts** category managers describe as “not approved at that depth.”
+- **Low-margin SKUs** (e.g., consumables, accessories tied to low-list categories) showing **effective discounts** category managers describe as "not approved at that depth."
 - **Late discovery:** issues often surfaced after a campaign peaked, when Finance deep-dives or when CS volume spikes.
 
 ---
@@ -30,10 +30,10 @@ Evidence below mixes **Finance and CS themes** with **engineering incident histo
 These are **themes** for discovery, not a final RCA. Engineering and Data will validate.
 
 1. **Policy vs. system mismatch:** What Growth intends (stack rules, one-per-customer, category exclusions) is not always what checkout and the promo engine enforce.
-2. **Identity and eligibility**, “One customer” is not consistently defined across account, email, device, and payment signals; duplicate account creation exploits that gap.
+2. **Identity and eligibility**, "One customer" is not consistently defined across account, email, device, and payment signals; duplicate account creation exploits that gap.
 3. **Referral design and timing**, Payout triggers or milestones may be too early or too loose relative to genuine acquisition economics.
-4. **Operational gaps**, No single owner for pre-flight checks on high-risk campaigns; weak handoff when Finance flags a code as “too hot.”
-5. **Reporting gap**, No agreed mart or dashboard for “suspected leakage” orders, so decisions rely on partial exports and debate.
+4. **Operational gaps**, No single owner for pre-flight checks on high-risk campaigns; weak handoff when Finance flags a code as "too hot."
+5. **Reporting gap**, No agreed mart or dashboard for "suspected leakage" orders, so decisions rely on partial exports and debate.
 
 ---
 
@@ -52,13 +52,13 @@ These are **themes** for discovery, not a final RCA. Engineering and Data will v
 - **Aligned technical behavior** with those definitions, or explicit acceptance of technical limits until a fix ships.
 - **Reporting and monitoring** so leakage and campaign concentration are visible on a cadence Finance and ops can act on.
 - **Escalation and case handling** when automated flags or finance review identify a pattern requiring cap, pause, or investigation.
-- **UAT and acceptance criteria** tied to requirements so “fixed” means measurable, not subjective.
+- **UAT and acceptance criteria** tied to requirements so "fixed" means measurable, not subjective.
 
 ---
 
 ## What success would look like
 
-- Northline Market agrees on **one** headline definition (or small set) of “suspected leakage” for internal management, with footnotes where data is weak.
+- Northline Market agrees on **one** headline definition (or small set) of "suspected leakage" for internal management, with footnotes where data is weak.
 - **Top leakage modes** have named owners, documented rules, and a path to engineering backlog with priorities.
 - **Dashboard or report pack v1** exists (after build) so daily/weekly review is possible without custom SQL for standard questions.
 - **Fewer repeat incidents** of the same stacking or category hole; when they occur, postmortem links to a requirement or test gap.
@@ -69,5 +69,5 @@ These are **themes** for discovery, not a final RCA. Engineering and Data will v
 ## Out of scope (this problem statement)
 
 - Choosing a specific fraud vendor or ML approach, out of scope **here**; may follow from requirements.
-- Full replacement of Northline Market’s identity stack, only noted if analysis proves it’s a hard dependency.
+- Full replacement of Northline Market's identity stack, only noted if analysis proves it's a hard dependency.
 - Criminal referral or law-enforcement process, outside this BA problem statement unless Legal opens a separate track.

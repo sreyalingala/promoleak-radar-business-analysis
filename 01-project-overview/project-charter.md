@@ -11,7 +11,7 @@
 
 Northline Market runs coupons, first-time buyer incentives, and a customer referral program to stay competitive with larger marketplaces. Over the last few planning cycles, Finance has flagged that **margin after promotions** on several categories sits below plan, and the gap is not fully explained by traffic mix or list-price moves alone.
 
-Customer service and the small fraud-adjacent team (where it exists) keep seeing the same complaint themes: rewards blocked, discounts removed, or customers insisting codes “used to work.” Engineering has patched individual incidents, but there is no **one agreed view** for how much value is leaking through promos, where it clusters, or who owns the response when a campaign or rule set misbehaves.
+Customer service and the small fraud-adjacent team (where it exists) keep seeing the same complaint themes: rewards blocked, discounts removed, or customers insisting codes "used to work." Engineering has patched individual incidents, but there is no **one agreed view** for how much value is leaking through promos, where it clusters, or who owns the response when a campaign or rule set misbehaves.
 
 PromoLeak Radar is the name given to this **business analysis** effort: document the problem, stakeholders, requirements, process changes, and what a monitoring/UAT path would look like **before** the company locks a build-or-buy decision for tooling.
 
@@ -49,9 +49,9 @@ The business lacks a shared, trusted view of leakage volume and drivers, and lac
 ## Out of scope
 
 - Writing or deploying production code, standing up pipelines, or selecting a vendor (analysis may *inform* vendor RFP later).
-- Replacing Northline Market’s core commerce platform or identity provider as part of this charter (separate initiative if ever).
+- Replacing Northline Market's core commerce platform or identity provider as part of this charter (separate initiative if ever).
 - Legal/criminal fraud prosecution strategy; this effort documents **business rules** and **policy**; Legal reviews customer-facing enforcement separately.
-- Redesign of marketing creative or full loyalty program strategy beyond what’s needed to explain promo economics and controls.
+- Redesign of marketing creative or full loyalty program strategy beyond what's needed to explain promo economics and controls.
 
 ---
 
@@ -59,8 +59,8 @@ The business lacks a shared, trusted view of leakage volume and drivers, and lac
 
 Charter phase is in good shape when:
 
-- Executive sponsor and product owner names are filled in and **problem statement** is agreed at least at “directionally correct” level.
-- **Top 3–5** priority scenarios (e.g., stacking on low-margin SKUs, referral self-dealing, duplicate first-time use) are written down with owners for business rules.
+- Executive sponsor and product owner names are filled in and **problem statement** is agreed at least at "directionally correct" level.
+- **Top 3-5** priority scenarios (e.g., stacking on low-margin SKUs, referral self-dealing, duplicate first-time use) are written down with owners for business rules.
 - BRD + FR/NFR drafts exist and Engineering has had one read-through for **feasibility flags** (not final estimate).
 - Traceability matrix links main requirements to **test themes**; gaps are visible, not missing.
 - Stakeholders accept that **Option** for tooling (build vs. extend vs. buy) stays open until requirements stabilize.
@@ -75,7 +75,7 @@ Charter phase is in good shape when:
 | **Director, Growth / Promotions** | Owns campaign rules, caps, stacking policy, customer-facing trade-offs |
 | **E-commerce / Product** | Checkout, cart, promo UX, release timing |
 | **Engineering** | Promo engine, OMS integration, identity hooks, technical debt |
-| **Data / BI** | Marts, dashboards, definitions of “flagged” orders |
+| **Data / BI** | Marts, dashboards, definitions of "flagged" orders |
 | **Customer Service** | Tickets, goodwill credits, scripts when discounts change |
 | **Legal / Compliance** | Terms, clawback language, what we can say to customers |
 | **Fraud / Risk** (if separate from CS) | Investigations, case tooling, escalation patterns |
@@ -122,13 +122,13 @@ Rough calendar for the **analysis phase** only (not implementation). Adjust once
 
 | Phase | Duration (indicative) | Output |
 |-------|----------------------|--------|
-| Kickoff + charter / problem alignment | 1–2 weeks | Signed charter (target), agreed problem statement v1 |
-| Stakeholder interviews + workshop | 2–3 weeks | Notes, decision log, updated assumptions/risks |
-| Requirements + process | 3–4 weeks | BRD, FR/NFR, business rules, as-is/to-be |
+| Kickoff + charter / problem alignment | 1-2 weeks | Signed charter (target), agreed problem statement v1 |
+| Stakeholder interviews + workshop | 2-3 weeks | Notes, decision log, updated assumptions/risks |
+| Requirements + process | 3-4 weeks | BRD, FR/NFR, business rules, as-is/to-be |
 | Solution-facing BA specs | 2 weeks | Dashboard reqs, data reqs, context diagram |
-| UAT + impact pack | 1–2 weeks | UAT plan, test themes, KPI/CBA draft for sponsor |
+| UAT + impact pack | 1-2 weeks | UAT plan, test themes, KPI/CBA draft for sponsor |
 
-**Total:** on the order of **8–12 weeks** of focused BA time, often parallelized with workshops, slips if holiday freeze or if Data cannot deliver sample extracts on time.
+**Total:** on the order of **8-12 weeks** of focused BA time, often parallelized with workshops, slips if holiday freeze or if Data cannot deliver sample extracts on time.
 
 ---
 

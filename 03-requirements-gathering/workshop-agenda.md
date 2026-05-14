@@ -9,7 +9,7 @@
 
 ## Workshop objective
 
-Draft a **shared future-state** for how Northline Market will **detect** suspected promotion abuse (duplicate accounts, first-time coupon reuse, referral misuse, stacking, low-margin discount issues), **triage** it, **decide** (false positive vs. action), and **communicate** internally so CS and Growth aren’t working from different playbooks. Leave with **owners**, **top gaps**, and **decisions** (or explicit escalations) documented, not a finished BRD.
+Draft a **shared future-state** for how Northline Market will **detect** suspected promotion abuse (duplicate accounts, first-time coupon reuse, referral misuse, stacking, low-margin discount issues), **triage** it, **decide** (false positive vs. action), and **communicate** internally so CS and Growth aren't working from different playbooks. Leave with **owners**, **top gaps**, and **decisions** (or explicit escalations) documented, not a finished BRD.
 
 ---
 
@@ -35,9 +35,9 @@ If Legal cannot attend, **park** customer-facing enforcement topics and schedule
 
 ## Pre-work (send 48 hours ahead)
 
-- Latest **problem statement** (1–2 pages) for PromoLeak Radar.  
+- Latest **problem statement** (1-2 pages) for PromoLeak Radar.  
 - **Draft as-is** pain bullets from interviews (Finance, Growth, CS, Fraud).  
-- One **anonymized** example each (if allowed): bad stacking outcome; referral loop; duplicate first-time use, or clear “we can’t share examples yet” from Legal.  
+- One **anonymized** example each (if allowed): bad stacking outcome; referral loop; duplicate first-time use, or clear "we can't share examples yet" from Legal.  
 - Blank **future-state swimlane** template (Miro / slide) for live fill-in.  
 - Ask Growth to bring **current stacking / first-time / referral policy** links or PDFs.
 
@@ -48,9 +48,9 @@ If Legal cannot attend, **park** customer-facing enforcement topics and schedule
 | Time | Length | Topic | Discussion focus | Expected output |
 |------|--------|-------|------------------|-----------------|
 | 0:00 | 5 min | Welcome & objective | Why this workshop; rules of engagement | Aligned expectations |
-| 0:05 | 10 min | **As-is recap**, detection & review today | Where signals come from today; who acts; where it breaks | Agreed “current pain” list on the board |
-| 0:15 | 15 min | **Triggering detection** | What should create a flag or case (rules, thresholds, data feeds) | Draft list of trigger types + “needs data” tags |
-| 0:30 | 15 min | **Triage & ownership** | Who owns queue, assignment, SLA, weekend coverage | Named role owners (or “TBD + deadline”) |
+| 0:05 | 10 min | **As-is recap**, detection & review today | Where signals come from today; who acts; where it breaks | Agreed "current pain" list on the board |
+| 0:15 | 15 min | **Triggering detection** | What should create a flag or case (rules, thresholds, data feeds) | Draft list of trigger types + "needs data" tags |
+| 0:30 | 15 min | **Triage & ownership** | Who owns queue, assignment, SLA, weekend coverage | Named role owners (or "TBD + deadline") |
 | 0:45 | 10 min | **Decision outcomes** | False positive, warn customer, cap code, restrict account, escalate Legal | Draft outcome types + who approves each |
 | 0:55 | 10 min | **Handoffs** | CS visibility; Growth notification when code capped; Finance sign-off on metrics | Handoff arrows on swimlane |
 | 1:05 | 10 min | **Dashboard / ops cadence** | What Finance and Ops need daily/weekly vs. ad hoc | MVP dashboard themes (not pixel design) |
@@ -80,10 +80,10 @@ By end of session, the group should either **decide** or **escalate with owner**
 
 ---
 
-## Parking lot (capture, don’t derail)
+## Parking lot (capture, don't derail)
 
 - Vendor fraud tools, ML scoring, identity vendor upgrades.  
-- Full **marketplace** channel scope if data isn’t ready.  
+- Full **marketplace** channel scope if data isn't ready.  
 - Exact **legal wording** for clawbacks, Legal follow-up if not in room.  
 - International **policy** differences if Northline Market sells cross-border.
 

@@ -36,7 +36,7 @@ Revenue leaks through promotion mechanics. The company lacks a **shared** view o
 - **Leakage signals** are found late (often month-end), via manual pulls or CS volume spikes.
 - **Investigation** is inconsistent: sometimes Fraud, sometimes Finance, sometimes no owner; evidence and outcomes are not always visible to CS.
 - **Kill or cap** a code may require an engineering emergency; audit of who changed what is weak in places.
-- **Reporting** for “suspected abuse” is not a first-class product; definitions differ by team.
+- **Reporting** for "suspected abuse" is not a first-class product; definitions differ by team.
 
 ---
 
@@ -70,7 +70,7 @@ Exact tooling (build, extend, buy) stays open until engineering sizes this BRD.
 ## Out of scope
 
 - Production implementation, vendor selection, or contract negotiation (informed by this BRD, not replaced by it).
-- Full replacement of Northline Market’s commerce platform, identity provider, or payment processor as part of PromoLeak Radar.
+- Full replacement of Northline Market's commerce platform, identity provider, or payment processor as part of PromoLeak Radar.
 - Criminal fraud prosecution or law enforcement coordination (separate track if ever).
 - Creative redesign of loyalty or referral **marketing** beyond what is needed for controls and messaging.
 
@@ -85,7 +85,7 @@ Exact tooling (build, extend, buy) stays open until engineering sizes this BRD.
 | **Finance Manager** | Trusted metrics, drill to campaign and SKU, audit for numbers shown to leadership |
 | **Fraud / Risk Analyst** | Queue, reason codes, evidence pack, false positive feedback, manageable volume |
 | **Product Manager** | Clear priorities, acceptance criteria, phasing that fits roadmap |
-| **Engineering Lead** | Stable requirements, explicit “TBD until spike” items, NFRs that match reality |
+| **Engineering Lead** | Stable requirements, explicit "TBD until spike" items, NFRs that match reality |
 | **Data Analyst** | Feasible definitions, pipeline ownership, limited MVP scope |
 | **Customer Support Manager** | Agent-visible disposition, scripts aligned to policy, training lead time |
 | **Compliance / Legal Representative** | Review of enforcement language, retention, and fair treatment |
@@ -97,7 +97,7 @@ Exact tooling (build, extend, buy) stays open until engineering sizes this BRD.
 
 | ID | Requirement statement |
 |----|-------------------------|
-| BRQ-01 | Northline Market shall **detect** first-time coupon reuse patterns against the agreed definition of “customer” (see business rules). |
+| BRQ-01 | Northline Market shall **detect** first-time coupon reuse patterns against the agreed definition of "customer" (see business rules). |
 | BRQ-02 | Northline Market shall **detect** duplicate or linked accounts used to harvest promos, using agreed signals (payment, device, address, account age) where legally and technically allowed. |
 | BRQ-03 | Northline Market shall **validate** coupon stacking against published stacking policy and record violations or warnings. |
 | BRQ-04 | Northline Market shall **flag** referral abuse scenarios defined with Legal and Growth (self-referral, closed loops, early payout abuse). |

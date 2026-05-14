@@ -10,7 +10,7 @@
 
 Northline Market is a **mid-sized e-commerce** retailer: big enough to run serious promo volume, still light on dedicated promo governance and deep fraud tooling compared to what Growth would like when campaigns get aggressive.
 
-Promotions include sitewide and targeted coupons, **first-time buyer** discounts, and a **referral** program that pays out when referees hit defined milestones. Rules live partly in the commerce promo tool, partly in legacy configuration, and partly in “how we’ve always run the campaign” spreadsheets. Finance closes the books each month with a growing list of **why did margin after promo miss plan?** questions that cannot be answered from one dashboard.
+Promotions include sitewide and targeted coupons, **first-time buyer** discounts, and a **referral** program that pays out when referees hit defined milestones. Rules live partly in the commerce promo tool, partly in legacy configuration, and partly in "how we've always run the campaign" spreadsheets. Finance closes the books each month with a growing list of **why did margin after promo miss plan?** questions that cannot be answered from one dashboard.
 
 ---
 
@@ -18,11 +18,11 @@ Promotions include sitewide and targeted coupons, **first-time buyer** discounts
 
 - **Duplicate accounts** and related identities used to claim first-time offers or referral rewards more than once.
 - **First-time coupon reuse** across accounts that share payment, address, or device patterns (exact detection TBD with Engineering).
-- **Referral misuse**, self-referrals, closed loops among linked accounts, or payouts before the business considers the referee “real.”
+- **Referral misuse**, self-referrals, closed loops among linked accounts, or payouts before the business considers the referee "real."
 - **Coupon stacking** or ordering issues so effective discount exceeds what Growth thought they published, especially on **low-margin** products.
 - **High discounts on low-margin SKUs**, either through category exclusions not enforced, or through combinations nobody tested before go-live.
 
-Pain is not only “bad customers.” **Config mistakes** and **unclear ownership** of who can publish a stackable code show up in the same incident reviews as abuse.
+Pain is not only "bad customers." **Config mistakes** and **unclear ownership** of who can publish a stackable code show up in the same incident reviews as abuse.
 
 ---
 
@@ -31,9 +31,9 @@ Pain is not only “bad customers.” **Config mistakes** and **unclear ownershi
 | Team | How they feel it |
 |------|------------------|
 | **Finance / FP&A** | Margin variance explanations are slow; board asks get answered with partial data and caveats. |
-| **Growth / Promotions** | Defensive about “Finance says we’re leaking” without a number they trust; afraid blunt caps will tank conversion. |
+| **Growth / Promotions** | Defensive about "Finance says we're leaking" without a number they trust; afraid blunt caps will tank conversion. |
 | **Engineering** | Interrupt-driven fixes; unclear priority between new features and promo guardrails. |
-| **Data / BI** | Ad hoc pulls every time there’s a fire; no durable mart for “promo leakage” everyone agrees on. |
+| **Data / BI** | Ad hoc pulls every time there's a fire; no durable mart for "promo leakage" everyone agrees on. |
 | **Customer Service** | Agents lack a single case view; goodwill credits patch over inconsistent internal decisions. |
 | **Legal** | Brought in late when customer comms about clawbacks or restrictions were already drafted informally. |
 
@@ -49,7 +49,7 @@ Implementation direction (not decided in this document alone) is expected to com
 2. **Visibility**, reporting/dashboard so Finance and ops see flagged volume, campaign concentration, and queue depth without waiting for month-end.
 3. **Workflow**, who investigates, how cases close, how CS learns disposition, how escalation runs when a code misbehaves at scale.
 
-Heavy **fraud platform** spend stays off the table until requirements show it’s necessary; Northline Market may get far with better rules + reporting first.
+Heavy **fraud platform** spend stays off the table until requirements show it's necessary; Northline Market may get far with better rules + reporting first.
 
 ---
 
@@ -70,7 +70,7 @@ Quantified NPV and payback belong here after FP&A assigns a leakage range and En
 - Margin pressure continues; Finance loses confidence in promo-led growth narratives.
 - Growth runs bigger campaigns without guardrails; each peak season **widens** exposure.
 - Engineering stays in reactive mode; technical debt around promos compounds.
-- Customer trust erodes if enforcement feels random; Legal exposure if comms don’t match terms.
+- Customer trust erodes if enforcement feels random; Legal exposure if comms don't match terms.
 
 ---
 

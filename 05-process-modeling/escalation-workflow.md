@@ -76,7 +76,7 @@ flowchart TD
 | **P1** | Within 1 business hour (business hours) | Within 4 business hours; sponsor join on bridge |
 | **P0** | Immediate page to Legal and Sponsor | Per counsel; minutes count for external narrative |
 
-**Off hours:** Northline Market must decide if P1 pages nights and weekends or downgrades to “best effort until 8 a.m.” Document the choice so people do not argue during an incident.
+**Off hours:** Northline Market must decide if P1 pages nights and weekends or downgrades to "best effort until 8 a.m." Document the choice so people do not argue during an incident.
 
 ---
 
@@ -111,7 +111,7 @@ Every escalation record should support Finance and Legal questions later.
 
 - **VIP or press-sensitive** accounts: default path is **P0** even if dollar amount looks small.
 - **Marketing emergency override** of a block: requires **second approver** and Legal if customer-visible; logged as manual override (see business rules BR-017 style).
-- **Engineering hotfix** rollback: post-incident note must link to a requirement or test gap, even if the gap is “missing monitor.”
+- **Engineering hotfix** rollback: post-incident note must link to a requirement or test gap, even if the gap is "missing monitor."
 
 ---
 

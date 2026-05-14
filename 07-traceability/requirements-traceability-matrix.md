@@ -7,7 +7,7 @@
 
 ## 1. Purpose
 
-This RTM ties Northline Market’s written requirements to backlog items, user stories, and planned UAT test IDs. It is meant for validation workshops and UAT prep, not as a promise that every path is built. When a cell shows multiple IDs, read left to right as primary then supporting links.
+This RTM ties Northline Market's written requirements to backlog items, user stories, and planned UAT test IDs. It is meant for validation workshops and UAT prep, not as a promise that every path is built. When a cell shows multiple IDs, read left to right as primary then supporting links.
 
 ---
 
@@ -16,9 +16,9 @@ This RTM ties Northline Market’s written requirements to backlog items, user s
 - **Requirement ID:** Only IDs that already exist in the BRD files (FR-001 to FR-018, NFR-001 to NFR-012, BR-001 to BR-018). No new requirement IDs are introduced here.
 - **Requirement type:** FR (functional), NFR (non-functional), or BR (business rule).
 - **Related Business Rule / Backlog / User Story / Test Case:** Trace forward into delivery and test. **Test Case IDs (TC-xxx)** are planned UAT pack placeholders; scripts will be written in the UAT section later.
-- **Priority:** Pulled from the functional or non-functional requirement tables where applicable; BR rows use the owning rule’s intent (Must for policy that blocks leakage, Should where workshop still owes numbers).
+- **Priority:** Pulled from the functional or non-functional requirement tables where applicable; BR rows use the owning rule's intent (Must for policy that blocks leakage, Should where workshop still owes numbers).
 - **Owner:** Named role accountable for sign-off or validation of that row, aligned to the stakeholder mix in the BRD tables.
-- **Status:** Where discovery left the item. “Ready for UAT” does not mean production ready; it means the requirement set is stable enough to script against pending open items.
+- **Status:** Where discovery left the item. "Ready for UAT" does not mean production ready; it means the requirement set is stable enough to script against pending open items.
 
 Functional and non-functional rows are the **authoritative test spine** for UAT. Business rule rows show **policy to requirement** mapping so Legal and Finance can see which FR or NFR enforces each rule.
 
@@ -71,7 +71,7 @@ Functional and non-functional rows are the **authoritative test spine** for UAT.
 | Requirement ID | Requirement Type | Requirement Summary | Business Objective | Related Business Rule | Related Backlog Item | Related User Story | Related Test Case ID | Priority | Owner | Status |
 |----------------|------------------|----------------------|--------------------|------------------------|----------------------|--------------------|------------------------|----------|-------|--------|
 | BR-001 | BR | One first-time redemption per eligible customer | Stop double welcome discounts | (self) | BL-002 | US-001 | TC-002 | Must | Marketing / Growth Manager | Needs stakeholder validation |
-| BR-002 | BR | Blocked linkage blocks first-time reuse | Close the “new account, same person” path | BR-001 | BL-002 | US-001 | TC-002 | Must | Fraud / Risk Analyst | Needs stakeholder validation |
+| BR-002 | BR | Blocked linkage blocks first-time reuse | Close the "new account, same person" path | BR-001 | BL-002 | US-001 | TC-002 | Must | Fraud / Risk Analyst | Needs stakeholder validation |
 | BR-003 | BR | Referral pays only after milestone and checks | Pay acquisition rewards on real orders, not ghosts | BR-004 | BL-006 | US-004 | TC-006 | Must | Marketing / Growth Manager | Needs stakeholder validation |
 | BR-004 | BR | Self-referral and closed loops ineligible | Kill obvious referral loops | BR-003 | BL-006 | US-004 | TC-006 | Must | Compliance / Legal Representative | Needs stakeholder validation |
 | BR-005 | BR | Stacking cap and application order | Margin control when multiple promos combine | (self) | BL-001 | US-003 | TC-001 | Must | Marketing / Growth Manager | Reviewed |
@@ -85,7 +85,7 @@ Functional and non-functional rows are the **authoritative test spine** for UAT.
 | BR-013 | BR | Reward reversal uses Legal-approved script | Customer comms stay enforceable | BR-003, BR-012 | BL-012 | US-010 | TC-012, TC-031 | Must | Compliance / Legal Representative | Needs stakeholder validation |
 | BR-014 | BR | Campaign pause or cap within hours on spike | Limit weekend bleed when a code runs hot | BR-010 | BL-021 | US-019, US-020 | TC-018, TC-019 | Must | Marketing / Growth Manager | Needs stakeholder validation |
 | BR-015 | BR | Legal sign-off before sensitive new signals | Fair lending and marketing law guardrails | BR-007, BR-008, BR-009 | BL-019 | US-017 | TC-022 | Must | Compliance / Legal Representative | Needs stakeholder validation |
-| BR-016 | BR | Append-only audit on threshold and kill-switch changes | Answer “who moved the goalposts” | BR-011 | BL-013 | US-011 | TC-013, TC-024 | Must | Engineering Lead | Reviewed |
+| BR-016 | BR | Append-only audit on threshold and kill-switch changes | Answer "who moved the goalposts" | BR-011 | BL-013 | US-011 | TC-013, TC-024 | Must | Engineering Lead | Reviewed |
 | BR-017 | BR | Policy exception requester plus approver | No same-person shadow credits | BR-018 | BL-020 | US-018 | TC-017 | Should | Customer Support Manager | Draft |
 | BR-018 | BR | Versioned leakage definition for dashboards | When the number moves, the footnote explains why | BR-005, BR-006 | BL-014, BL-016 | US-012, US-022 | TC-007, TC-029 | Must | Finance Manager | Needs stakeholder validation |
 
@@ -116,7 +116,7 @@ Functional and non-functional rows are the **authoritative test spine** for UAT.
 ## 6. UAT readiness notes
 
 - **Ready to script first:** FR-003, FR-008, FR-009, FR-011, FR-012, FR-015, and NFR-011 (clear pass or fail paths, strong audit story). Pair with **US-003, US-007, US-008, US-010, US-011, US-017** and TC-001, TC-009, TC-010, TC-012, TC-013, TC-016, TC-030.
-- **Blocked on numbers or Legal:** FR-001, FR-002, FR-004, FR-005, FR-014, NFR-010, NFR-012 (TBD windows, tie-out tolerance, template approvals). Run **US-021** as the gate for “script exists” and **US-022** for definition versioning before exec readout.
+- **Blocked on numbers or Legal:** FR-001, FR-002, FR-004, FR-005, FR-014, NFR-010, NFR-012 (TBD windows, tie-out tolerance, template approvals). Run **US-021** as the gate for "script exists" and **US-022** for definition versioning before exec readout.
 - **Exit criteria reminder:** **BL-022** ties the guided UAT pack to the FR list and NFR smoke; keep **BR-018** and **NFR-010** on the same exit checklist so headline dollars do not ship without a tie-out story.
 
 ---

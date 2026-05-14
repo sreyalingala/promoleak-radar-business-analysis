@@ -25,7 +25,7 @@
 | **Related requirement ID** | FR-002, BR-007 |
 | **Priority** | Must Have |
 | **User story** | As a **Fraud / Risk Analyst**, I want **duplicate account signals based on shared payment**, so that **I can queue obvious payment-farm patterns without waiting for Finance close**. |
-| **Acceptance criteria** | **Given** two accounts share a stored payment token or card hash within the policy window, **when** either account applies a first-time or high-value promo, **then** a flag is raised with signal type “shared payment.” **Given** PCI constraints, **when** the signal is unavailable, **then** the UI shows “signal not available” instead of a wrong green check. |
+| **Acceptance criteria** | **Given** two accounts share a stored payment token or card hash within the policy window, **when** either account applies a first-time or high-value promo, **then** a flag is raised with signal type "shared payment." **Given** PCI constraints, **when** the signal is unavailable, **then** the UI shows "signal not available" instead of a wrong green check. |
 | **Business notes** | Coordinate with Data on hash availability; BR-007 thresholds are TBD. |
 
 ---
@@ -39,7 +39,7 @@
 | **Priority** | Must Have |
 | **User story** | As a **Marketing / Growth Manager**, I want **stacking validated against the published stack policy at capture**, so that **customers cannot combine codes in ways we never approved**. |
 | **Acceptance criteria** | **Given** a cart with two promos, **when** checkout evaluates stack order, **then** the outcome matches the published allow or deny list and stores the **policy version id** on the order. **Given** a stack that violates BR-005, **when** policy says block, **then** checkout blocks with a customer-safe message; **when** policy says warn only in v1, **then** the order stores a warn flag for review. |
-| **Business notes** | Marketing must supply golden orders for UAT; “warn vs block” is a sponsor call. |
+| **Business notes** | Marketing must supply golden orders for UAT; "warn vs block" is a sponsor call. |
 
 ---
 
@@ -64,7 +64,7 @@
 | **Related requirement ID** | FR-005, BR-006 |
 | **Priority** | Must Have |
 | **User story** | As a **Finance Manager**, I want **low-margin SKUs flagged when discount depth breaches the floor**, so that **we catch category promos that were never supposed to go that deep**. |
-| **Acceptance criteria** | **Given** a line on the exclusion list with trusted COGS, **when** effective margin after promo falls below the floor, **then** the order or line is flagged with reason “margin floor.” **Given** COGS is missing, **when** the job runs, **then** the line is tagged “margin unknown” and excluded from headline leakage $ unless Finance opts in via BR-018 footnote. |
+| **Acceptance criteria** | **Given** a line on the exclusion list with trusted COGS, **when** effective margin after promo falls below the floor, **then** the order or line is flagged with reason "margin floor." **Given** COGS is missing, **when** the job runs, **then** the line is tagged "margin unknown" and excluded from headline leakage $ unless Finance opts in via BR-018 footnote. |
 | **Business notes** | Merchandising may need to own category list updates with Finance. |
 
 ---
@@ -90,7 +90,7 @@
 | **Related requirement ID** | FR-008, BR-011 |
 | **Priority** | Must Have |
 | **User story** | As a **Fraud / Risk Analyst**, I want **one manual review queue for promo flags**, so that **I am not chasing tickets, DMs, and spreadsheets for the same incident**. |
-| **Acceptance criteria** | **Given** a new flag from any detection path, **when** the pipeline succeeds, **then** a queue item appears in **New** with links to order and campaign. **Given** the pipeline fails, **when** I open the dashboard, **then** I see a stale-data banner and no empty queue that looks “healthy.” |
+| **Acceptance criteria** | **Given** a new flag from any detection path, **when** the pipeline succeeds, **then** a queue item appears in **New** with links to order and campaign. **Given** the pipeline fails, **when** I open the dashboard, **then** I see a stale-data banner and no empty queue that looks "healthy." |
 | **Business notes** | Queue owner still needs Ops or Fraud head to name in charter. |
 
 ---
@@ -129,7 +129,7 @@
 | **Related requirement ID** | FR-011 |
 | **Priority** | Must Have |
 | **User story** | As a **Fraud / Risk Analyst**, I want **structured disposition with required fields**, so that **Customer Support and Finance see the same outcome story**. |
-| **Acceptance criteria** | **Given** I try to close a high-risk disposition, **when** required fields are blank, **then** save is blocked with inline errors. **Given** I close with “false positive,” **when** I save, **then** the reason code is mandatory and stored for tuning (FR-001 / FR-007 feedback loop). |
+| **Acceptance criteria** | **Given** I try to close a high-risk disposition, **when** required fields are blank, **then** save is blocked with inline errors. **Given** I close with "false positive," **when** I save, **then** the reason code is mandatory and stored for tuning (FR-001 / FR-007 feedback loop). |
 | **Business notes** | Legal reviews customer-facing outcomes tied to certain disposition codes (NFR-012). |
 
 ---
@@ -141,7 +141,7 @@
 | **Story ID** | US-011 |
 | **Related requirement ID** | FR-012, BR-016, NFR-005 |
 | **Priority** | Must Have |
-| **User story** | As a **Compliance / Legal Representative**, I want **an append-style audit trail for config, kill-switch, and case changes**, so that **Northline Market can answer “who changed what and when.”** |
+| **User story** | As a **Compliance / Legal Representative**, I want **an append-style audit trail for config, kill-switch, and case changes**, so that **Northline Market can answer "who changed what and when."** |
 | **Acceptance criteria** | **Given** a user changes a threshold or fires a kill-switch, **when** the change commits, **then** an audit row records user, time, old value, new value. **Given** an auditor exports the trail for a date range, **when** export completes, **then** the export itself is logged per FR-012 scope. |
 | **Business notes** | Retention follows NFR-008; Engineering confirms append-only config in prod. |
 
@@ -168,7 +168,7 @@
 | **Related requirement ID** | FR-006 |
 | **Priority** | Should Have |
 | **User story** | As a **Marketing / Growth Manager**, I want **a campaign ROI slice that uses fields I trust**, so that **I can defend spend without pretending leakage does not exist**. |
-| **Acceptance criteria** | **Given** a campaign id, **when** I open the ROI view, **then** I see promo spend, attributed revenue, and the same leakage proxy Finance uses (or a footnoted delta if Marketing still uses a secondary metric). **Given** data is incomplete, **when** I load the view, **then** missing fields show “not available” instead of zero. |
+| **Acceptance criteria** | **Given** a campaign id, **when** I open the ROI view, **then** I see promo spend, attributed revenue, and the same leakage proxy Finance uses (or a footnoted delta if Marketing still uses a secondary metric). **Given** data is incomplete, **when** I load the view, **then** missing fields show "not available" instead of zero. |
 | **Business notes** | Same marts as US-012; avoid two sources of truth for promo spend. |
 
 ---
@@ -181,7 +181,7 @@
 | **Related requirement ID** | FR-006 |
 | **Priority** | Could Have |
 | **User story** | As an **Executive Sponsor**, I want **a tiny headline strip (three tiles max)**, so that **I can see directionally if leakage is worse than last week without a forty-slide pack**. |
-| **Acceptance criteria** | **Given** Finance has signed the three headline metrics, **when** I open the exec strip, **then** only those metrics render with the version footnote. **Given** Finance has not signed, **when** I open the strip, **then** the UI shows “pending Finance sign-off” placeholders. |
+| **Acceptance criteria** | **Given** Finance has signed the three headline metrics, **when** I open the exec strip, **then** only those metrics render with the version footnote. **Given** Finance has not signed, **when** I open the strip, **then** the UI shows "pending Finance sign-off" placeholders. |
 | **Business notes** | Could ship after US-012 if time is tight. |
 
 ---
@@ -271,7 +271,7 @@
 | **Story ID** | US-021 |
 | **Related requirement ID** | NFR-006, NFR-010, FR-001 to FR-018 (smoke) |
 | **Priority** | Should Have |
-| **User story** | As a **Product Manager**, I want **a guided UAT pack that walks primary FR flows**, so that **we do not “go live” with only happy-path QA**. |
+| **User story** | As a **Product Manager**, I want **a guided UAT pack that walks primary FR flows**, so that **we do not "go live" with only happy-path QA**. |
 | **Acceptance criteria** | **Given** the UAT script for Finance and Fraud, **when** testers finish, **then** pass or fail is recorded per story with evidence links. **Given** NFR-006 usability tasks, **when** a tester cannot finish without SQL, **then** the story fails UAT until UX is fixed or waived in writing by sponsor. |
 | **Business notes** | Include NFR-012 checklist for any story that touches customer comms. |
 

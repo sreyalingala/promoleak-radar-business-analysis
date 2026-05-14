@@ -11,7 +11,7 @@
 
 Northline Market is losing money through **duplicate accounts**, **first-time coupon reuse**, **referral misuse**, **stacking**, and **deep discounts on low-margin SKUs**, mixed with plain **config mistakes** and **unclear policy ownership**. Elicitation exists so we stop guessing: we need enough fact and opinion on record to write requirements, process, and dashboard asks that Finance, Growth, Engineering, and CS can all recognize.
 
-This phase is **not** to pick a vendor or final architecture. It is to learn how promos and referrals actually behave end-to-end, what data exists, who decides what, and what “fixed” would look like in operations.
+This phase is **not** to pick a vendor or final architecture. It is to learn how promos and referrals actually behave end-to-end, what data exists, who decides what, and what "fixed" would look like in operations.
 
 ---
 
@@ -22,8 +22,8 @@ This phase is **not** to pick a vendor or final architecture. It is to learn how
 | **Current promotion setup** | Where codes are created, who approves, what systems apply discounts, where rules disagree. |
 | **Coupon / campaign approval** | Who can publish, who can override, what checks happen before go-live. |
 | **Known abuse patterns** | What Fraud and CS already see; what Finance sees in margin variance. |
-| **How leakage is measured today** | Spreadsheets, BI views, or “we don’t”, so we know the gap. |
-| **Dashboard and reporting holes** | What’s missing for daily/weekly ops vs. month-end only. |
+| **How leakage is measured today** | Spreadsheets, BI views, or "we don't", so we know the gap. |
+| **Dashboard and reporting holes** | What's missing for daily/weekly ops vs. month-end only. |
 | **Data availability & quality** | Order line, promo application, referral events, identity keys, latency. |
 | **Manual review today** | Who gets a list, from where, how cases close, what gets escalated. |
 | **Policy and legal constraints** | Terms, referral clawback, what we can say to customers, retention limits. |
@@ -36,11 +36,11 @@ This phase is **not** to pick a vendor or final architecture. It is to learn how
 | Group | Typical roles | What we need from them |
 |-------|---------------|------------------------|
 | **Commercial** | Marketing / Growth Manager | Campaign intent, stacking rules, approval path, pain on Finance pushback |
-| **Finance** | Finance Manager, FP&A delegate | Margin definitions, variance drivers, what numbers they’ll defend |
+| **Finance** | Finance Manager, FP&A delegate | Margin definitions, variance drivers, what numbers they'll defend |
 | **Risk** | Fraud / Risk Analyst | Patterns, evidence needs, false positive tolerance |
 | **Product & delivery** | Product Manager, Engineering Lead | Checkout flow, promo engine limits, change windows |
-| **Data** | Data Analyst / BI | Sources, joins, freshness, what’s expensive to build |
-| **Customer-facing** | Customer Support Manager | Tickets, credits, scripts, what agents can’t see today |
+| **Data** | Data Analyst / BI | Sources, joins, freshness, what's expensive to build |
+| **Customer-facing** | Customer Support Manager | Tickets, credits, scripts, what agents can't see today |
 | **Governance** | Compliance / Legal Representative | Terms, comms, investigation data retention |
 
 Executive Sponsor gets **summary readouts** and decision sessions, not every interview.
@@ -53,16 +53,16 @@ Executive Sponsor gets **summary readouts** and decision sessions, not every int
 |--------|----------------|----------------|
 | **1:1 stakeholder interviews** | Early; deep dives per role | Notes, quotes, follow-up data requests |
 | **Requirements workshop** | Mid-discovery; cross-functional | Decision list, future-state process sketch |
-| **Promotion policy review** | With Growth + Legal | Marked-up policy doc, list of “published vs. actual” gaps |
+| **Promotion policy review** | With Growth + Legal | Marked-up policy doc, list of "published vs. actual" gaps |
 | **Data review** | With Data + Eng + Fraud | Source map, known gaps, sample anonymized pulls |
 | **Process walkthrough** | With PM + CS + Ops | As-is swimlane, exception paths |
-| **Dashboard / report review** | With Finance + Data | What exists today, what’s wrong with it, MVP widget list |
+| **Dashboard / report review** | With Finance + Data | What exists today, what's wrong with it, MVP widget list |
 
 ---
 
 ## Planned sessions (indicative)
 
-Order shifts if calendars force it; keep **Finance + Data** early so we don’t write fiction.
+Order shifts if calendars force it; keep **Finance + Data** early so we don't write fiction.
 
 | # | Session | Participants | Method |
 |---|---------|--------------|--------|
@@ -105,7 +105,7 @@ Ops Manager joins workshop and reporting review if Northline Market has a centra
 
 ## Open questions to resolve during elicitation
 
-- Does **“one customer”** for promo limits mean account ID only, or email/device/payment linkage, and who owns that definition?
+- Does **"one customer"** for promo limits mean account ID only, or email/device/payment linkage, and who owns that definition?
 - **Referral payout trigger:** ship, deliver, first payment capture, or other, and does Finance match that timing in models?
 - **Marketplace / third-party channel** orders: in scope for v1 analysis or explicitly out?
 - **Kill-switch** for a code: who has authority, how fast can it propagate, and is there audit?
@@ -117,5 +117,5 @@ Ops Manager joins workshop and reporting review if Northline Market has a centra
 ## Risks to elicitation itself
 
 - People downplay leakage until **anonymized examples** or Finance variance memos are in the room.
-- The engineer who knows promo edge cases is **booked solid** before peak, schedule early or document “unknown until spike.”
+- The engineer who knows promo edge cases is **booked solid** before peak, schedule early or document "unknown until spike."
 - Growth and Finance schedule separate one-on-ones and never **jointly** agree on definitions, the workshop is mandatory for that.
