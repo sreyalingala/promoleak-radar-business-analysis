@@ -1,47 +1,107 @@
-# To-Be Process: PromoLeak Radar Operating Model
+# To-Be Process: Northline Market PromoLeak Radar (Future State)
 
-**Goal:** Still sell stuff and acquire customers, but stop funding obvious abuse and catch bad configs before they run for two weeks unchecked.
+> **Note:** Future state is **target behavior** for the case study. Engineering may split batch vs. near-time scoring, and Legal must sign any customer-facing enforcement. Treat open questions at the bottom as real homework, not decoration.
 
-## How we want it to feel day-to-day
+## Short overview
 
-- Flags land in a dashboard (batch is fine at first); alerts only if thresholds are tuned so people don’t mute the channel.
-- Investigator can see order lines, codes, reason codes, history, not a CSV hunt.
-- Rule changes (caps, stacking) go through a small change window + CS heads-up so agents aren’t improvising.
-- After a material rule change, someone actually looks at conversion and CS tags for a week instead of assuming it was fine.
+Northline Market still runs aggressive promos, but **before** and **after** capture the business applies **consistent** rules, **identity and history checks**, **risk scoring**, and a **manual review path** for high-risk orders. **Marketing**, **Finance**, and **Fraud / Risk** look at the **same** dashboard definitions for campaign KPIs and suspected leakage. Low-risk traffic checks out with minimal friction; high-risk traffic gets a human with tools, SLAs, and an audit trail.
 
-## To-be flow (narrative)
+## Future-state design principles
 
-1. **Design**, Growth proposes campaign with **pre-flight checklist**: margin floor, stack policy, sunset date, owner.
-2. **Publish**, Dual-control or peer review for high-risk codes (threshold TBD by sponsor).
-3. **Shop**, Checkout enforces published stacking and eligibility; edge cases logged as events for BI.
-4. **Monitor**, Daily dashboard shows leakage indicators and new case volume; thresholds notify on-call role.
-5. **Triage**, Cases assigned; investigators document outcome; false positives feed tuning backlog.
-6. **Remediate**, Confirmed abuse paths: account restriction, clawback per policy, or code shutdown, **Legal-approved** playbooks.
-7. **Retro**, Monthly review with Finance and Growth: metrics, false positive rate, and backlog of rule changes.
+- **Policy and system match:** What Growth publishes is what checkout enforces, versioned and auditable.
+- **Don’t boil the ocean in v1:** Batch scoring plus a small queue beats a perfect real-time model that never ships.
+- **Named ownership:** Someone is on the hook for queue depth, threshold tuning, and kill-switch decisions.
+- **Finance-grade definitions:** Headline metrics have a footnoted spec Finance signed.
+- **CS is not last to know:** Customer-visible actions use approved scripts and visible disposition.
 
-## Swimlane (text, to-be)
+---
 
+## To-be flow (Mermaid)
+
+```mermaid
+flowchart TD
+  subgraph apply [Customer applies coupon]
+    A[Customer applies coupon or referral at checkout]
+  end
+  subgraph validate [System validation]
+    B[System validates campaign rules: dates, eligibility, stack policy]
+    C[Identity and promo history check: account, device, payment, address signals per policy]
+    D[Calculate risk score / tier]
+  end
+  subgraph branch [Routing by risk]
+    E{Risk tier}
+    F[Low risk: auto-approve path continues]
+    G[Medium risk: log, monitor, optional delayed review]
+    H[High risk: manual review queue]
+  end
+  subgraph close [After decision]
+    I[Order completes or is blocked per policy]
+    J[Dashboard updates campaign KPIs and leakage views]
+    K[Finance, Marketing, Risk review trends on cadence]
+  end
+  A --> B --> C --> D --> E
+  E -->|Low| F --> I --> J --> K
+  E -->|Medium| G --> I --> J --> K
+  E -->|High| H --> I --> J --> K
 ```
-[Growth] checklist → publish → (monitoring)
-[Engineering] events → warehouse → [Data] marts → [Dashboard]
-[Investigator] queue ← alerts ← [Rules engine / scoring TBD]
-[CS] updated macros + CRM case from outcome
-[Finance] weekly metrics pack automated from same marts
-```
 
-## Handoffs
+**Reality hook:** “Hold” on high risk may be soft (flag only) in early pilot until Legal approves harder blocks. Call that out in rollout notes, not in the diagram above, or you over-promise.
 
-| From | To | What gets handed off |
-|------|-----|----------|
-| Data | Ops | “Yesterday’s job ran clean” (or not, then banner on dashboard) |
-| Investigator | CS | Short disposition note agents can read |
-| Growth | All | Change log line when a cap or stack rule moves |
+---
 
-## Dependencies
+## Step-by-step process explanation
 
-- Checkout/OMS actually emitting the events we said we need, otherwise the dashboard is theatre.
-- Bodies on the investigation queue; if it’s nobody’s job, alerts get ignored.
+1. **Customer applies coupon** (or referral is in play on the same journey). Same storefront paths as today, but behind the scenes more data is read.
+2. **System validates campaign rules** against the **authoritative** rule store for that campaign (not a stale spreadsheet). Stacking order is deterministic.
+3. **Identity and promo history checks** run against Northline Market’s agreed definition of “customer” and lookback windows (see `04-business-requirements/business-rules.md`). This is where duplicate accounts and first-time reuse get caught **before** or **right after** capture, depending on architecture.
+4. **Risk score** combines signals (stack stress, margin floor breach, referral pattern, velocity). Weights are versioned so Finance can explain month-over-month jumps.
+5. **Low risk** orders flow with minimal added latency (exact latency is an NFR spike).
+6. **Medium risk** orders complete but are **logged** for monitoring, cohort review, and threshold tuning. Marketing may get a weekly digest, not a page at 2 a.m. for every medium hit.
+7. **High risk** orders go to a **manual review queue** with assignment, SLA, and disposition codes. Some paths may **block** capture only if Legal and Product sign that UX.
+8. **Dashboard** updates campaign KPIs, flag volume, false positive rate, and leakage proxy metrics Finance owns.
+9. **Finance, Marketing, and Risk** review trends on a **weekly** (ops) and **monthly** (exec) cadence from the same definitions.
 
-## Not decided yet
+---
 
-- New case tool vs. bolt onto whatever fraud/CRM we already pay for, reqs here stay tool-agnostic on purpose.
+## Key controls added
+
+| Control | Purpose |
+|---------|---------|
+| Authoritative rule + version id | Stops “we didn’t mean to stack that” drift |
+| Identity and history checks | Cuts duplicate and first-time reuse |
+| Risk scoring | Prioritizes humans and reduces blind firefighting |
+| Manual review queue + SLA | Work is visible, not in Slack threads |
+| Dashboard + agreed definitions | One place for Marketing vs. Finance arguments |
+| Kill-switch / cap path | Limits blast radius when a code runs hot |
+| Audit trail on decisions and config | Defensible when a customer or regulator asks |
+
+---
+
+## Stakeholder handoffs
+
+| From | To | When |
+|------|-----|------|
+| **Engineering / Data** | **Operations / Fraud** | Pipeline healthy, dashboard date stamp updated |
+| **Manual reviewer** | **Customer Support** | Case closed with disposition text agents can read |
+| **Marketing** | **All** | Rule or cap change logged with effective time |
+| **Finance** | **Marketing + Risk** | Weekly metric review invites with pre-read |
+| **Legal** | **Product + CS** | Before new customer-visible enforcement templates go live |
+
+---
+
+## Expected improvements
+
+- **Earlier** detection of runaway campaigns and abusive cohorts (days, not only post-close).
+- **Less** revenue loss on low-margin SKUs from unchecked stacking and misconfiguration.
+- **Fewer** “mystery” CS credits because disposition and policy line up.
+- **Faster** internal alignment when everyone references the same dashboard slice and BRD definitions.
+
+---
+
+## Open questions
+
+- **Hard block vs. flag only** for high risk at v1 (Legal and conversion trade-off).
+- **Who owns the queue** org chart name (Fraud vs. Operations vs. hybrid).
+- **Marketplace** orders in or out of first release of scoring.
+- **Guest checkout** handling when identity is thin.
+- **Latency** targets Marketing will accept on checkout if any scoring is synchronous.
