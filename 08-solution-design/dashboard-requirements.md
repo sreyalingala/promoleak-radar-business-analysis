@@ -1,4 +1,4 @@
-# Dashboard Requirements — PromoLeak Radar
+# Dashboard Requirements: PromoLeak Radar
 
 **Audience:** Data/BI builders, Product, Finance consumers  
 **Status:** First draft; wireframe companion in `dashboard-wireframe.md`
@@ -15,7 +15,7 @@
 ## Global filters (MVP)
 
 - Date (default: yesterday + rolling 7 days)
-- Channel (web, app, marketplace — as available)
+- Channel (web, app, marketplace, as available)
 - Category / department
 - Campaign or coupon code (typeahead)
 
@@ -23,7 +23,7 @@
 
 ### 1. Exec pulse (optional)
 
-- Big numbers: flagged orders, rough $ at risk — with the same footnote Finance approved.
+- Big numbers: flagged orders, rough $ at risk, with the same footnote Finance approved.
 - 30-day trend line; scribble space (or annotations) for “we changed rule X on this date.”
 
 ### 2. Operations dashboard
@@ -34,7 +34,7 @@
 
 ### 3. Investigator drill-down
 
-- Order-level table with reason codes, link to detail pane (see FR-03).
+- Order-level table with reason codes, link to detail pane (see FR-006 drill-down, FR-008 queue).
 - Ability to export **within policy** (column list approved by Legal).
 
 ## Data freshness & quality
@@ -44,9 +44,9 @@
 
 ## Non-goals for MVP dashboard
 
-- Fancy customer network graphs — nice later; not required to start.
+- Fancy customer network graphs, nice later; not required to start.
 
 ## Open decisions
 
-- Single BI tool vs. embedded app — org standard wins.
+- Single BI tool vs. embedded app, org standard wins.
 - Currency handling for cross-border if applicable.

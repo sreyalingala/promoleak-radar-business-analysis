@@ -26,12 +26,12 @@ Copy these columns into Jira / Excel / whatever you actually use. I kept a copy 
 | Regression test needed? | Y/N |
 | Business impact note | Plain language for sponsor if needed |
 
-## Log (placeholder rows — delete when using real tool)
+## Log (placeholder rows: delete when using real tool)
 
 | ID | Summary | Status | Severity | Req ref |
 |----|---------|--------|----------|---------|
 | DEF-0001 | Example: stale banner missing on pipeline fail | New | 2 | TC-EDGE-01 |
-| DEF-0002 | Example: export includes PII column for CS role | New | 1 | NFR-10 |
+| DEF-0002 | Example: export includes PII column for CS role | New | 1 | NFR-003, NFR-011 |
 
 ## Triage rules of thumb
 

@@ -21,7 +21,7 @@ Rough ASCII so BI / UX have something to react to before anyone opens Figma.
 │ INVESTIGATION QUEUE        New: 42   In review: 17   SLA risk: 3 │
 │ [Open queue view]                                                │
 └─────────────────────────────────────────────────────────────────┘
-* Footnote defining “at risk” calculation — Finance-approved text.
+* Footnote defining “at risk” calculation, Finance-approved text.
 ```
 
 ## Screen: Order Detail (Investigator)
@@ -45,7 +45,7 @@ Rough ASCII so BI / UX have something to react to before anyone opens Figma.
 
 ## Notes for implementation
 
-- Masking rules per NFR-10.
+- Masking rules per NFR-003 and NFR-011.
 - Print/export layout can be simpler; do not ship export before Legal review.
 
 ## Changelog

@@ -7,13 +7,13 @@ Fill in solution/test IDs as build firms up. **TBD** = not mapped yet, not “fo
 
 | Business need | BRD ref | FR / NFR / BR | User story | Solution component | Test case |
 |---------------|---------|---------------|------------|---------------------|-----------|
-| See leakage trends | BRD §6 capability table | FR-01, FR-02 | US-01 | Dashboard / mart | TC-REPORT-01 |
-| Investigate orders | BRD §6 | FR-03, FR-11, FR-21 | US-02 | Case UI or module | TC-WF-01 |
-| Stop runaway campaign | BRD §6 | FR-30, BR-02 | US-03 | Promo admin / engine | TC-RULE-01 |
-| CS sees case outcome | BRD stakeholder needs | FR-41 (optional), NFR-10 | US-04 | CRM integration | TC-INT-01 |
-| Reliable data | BRD dependencies | NFR-01, NFR-60, FR-40 | US-05 | Pipeline / monitoring | TC-NFR-PIPE-01 |
-| Stacking policy | Business rules | FR-31, BR-02 | PB-06 | Checkout service | TBD |
-| Referral separation | Business rules | FR-04, BR-04 | PB-08 | Referral subsystem | TBD |
+| See leakage trends | BRD business requirements | FR-006, FR-013, FR-018 | US-01 | Dashboard / mart | TC-REPORT-01 |
+| Investigate orders | BRD business requirements | FR-008, FR-009, FR-011, FR-012 | US-02 | Case UI or module | TC-WF-01 |
+| Stop runaway campaign | BRD business requirements | FR-017, BR-014 | US-03 | Promo admin / engine | TC-RULE-01 |
+| CS sees case outcome | BRD stakeholder needs | FR-011 (optional CRM), NFR-003, NFR-011 | US-04 | CRM integration | TC-INT-01 |
+| Reliable data | BRD dependencies | NFR-001, NFR-010, FR-006 feeds | US-05 | Pipeline / monitoring | TC-NFR-PIPE-01 |
+| Stacking policy | Business rules | FR-003, BR-005 | PB-06 | Checkout service | TBD |
+| Referral separation | Business rules | FR-004, BR-003, BR-004 | PB-08 | Referral subsystem | TBD |
 
 ## Coverage checklist (for UAT prep)
 
