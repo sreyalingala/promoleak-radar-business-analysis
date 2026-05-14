@@ -28,7 +28,7 @@
 | BR-015 | **Legal and privacy checks** before turning on new signals that use **sensitive** attributes; Legal maintains approved attribute list. | Detection models | Compliance / Legal Representative | None | Fair lending and marketing law context for Northline Market regions. |
 | BR-016 | **Audit logging:** any change to BR thresholds, stack policy flags, kill-switch, or manual payout override writes an **append-only** audit record with user, time, old and new values. | Admin and config tools | Engineering Lead | Break-glass account per Security policy | Retention per NFR. |
 | BR-017 | **Role-based override:** policy exceptions (credits, manual completion) require **requester + approver** roles, reason code, and optional expiry; approver cannot be the same person as requester. | CS and Growth tools | Customer Support Manager | None for same-person approval | Mapped to FR-016. |
-| BR-018 | **Reporting definitions:** “suspected leakage $” equals **sum of promo discount dollars** on orders meeting **flag set vTBD** minus orders marked false positive in period; Finance publishes denominator exclusions (cancelled, test). | Dashboards and exports | Finance Manager | Board pack may use alternate view if footnoted | Version flag definitions when they change. |
+| BR-018 | **Reporting definitions:** “suspected leakage $” equals **sum of promo discount dollars** on orders meeting **flag set (version TBD)** minus orders marked false positive in period; Finance publishes denominator exclusions (cancelled, test). | Dashboards and exports | Finance Manager | Board pack may use alternate view if footnoted | Version flag definitions when they change. |
 
 ---
 
